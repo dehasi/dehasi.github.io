@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Database | Ravil Galeyev</title>
+<meta name="generator" content="Jekyll v3.6.3" />
+<meta property="og:title" content="Database" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Give a proper name to tables Sometimes it’s worth to add special suffixes and prefixes like" />
+<meta property="og:description" content="Give a proper name to tables Sometimes it’s worth to add special suffixes and prefixes like" />
+<link rel="canonical" href="/csd/2018/03/25/database.html" />
+<meta property="og:url" content="/csd/2018/03/25/database.html" />
+<meta property="og:site_name" content="Ravil Galeyev" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-03-24T19:07:28-05:00" />
+<script type="application/ld+json">
+{"url":"/csd/2018/03/25/database.html","headline":"Database","dateModified":"2018-03-24T19:07:28-05:00","datePublished":"2018-03-24T19:07:28-05:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/csd/2018/03/25/database.html"},"description":"Give a proper name to tables Sometimes it’s worth to add special suffixes and prefixes like","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Ravil Galeyev" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ravil Galeyev</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/speaking/">Speaking</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Database</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-03-24T19:07:28-05:00" itemprop="datePublished">Mar 25, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h3 id="give-a-proper-name-to-tables">Give a proper name to tables</h3>
+<p>Sometimes it’s worth to add special suffixes and prefixes like</p>
+
+<p><code class="highlighter-rouge">T_NAME_V</code>, <code class="highlighter-rouge">T_NAME_E</code>, etc..</p>
+
+<p>to distinguish service and business tables.</p>
+
+<h3 id="consider-having-common-columns">Consider having common columns</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">name</th>
+      <th style="text-align: left">type</th>
+      <th style="text-align: left">explanation</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">id</td>
+      <td style="text-align: left">int</td>
+      <td style="text-align: left">an artificial integer id</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">version</td>
+      <td style="text-align: left">int</td>
+      <td style="text-align: left">increments after each change</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">[key/business key]</td>
+      <td style="text-align: left">a set of columns</td>
+      <td style="text-align: left">business key, this values are unique and not null</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">[other data]</td>
+      <td style="text-align: left">a set of columns</td>
+      <td style="text-align: left">any other data</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">created_at</td>
+      <td style="text-align: left">timestamp</td>
+      <td style="text-align: left">date and time when the row was created</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">modified_at</td>
+      <td style="text-align: left">timestamp</td>
+      <td style="text-align: left">date and time when the row was updated last time</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">comment</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">any comment, why this row is created or updated. (i.e. put jira ticket number)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="constraints">Constraints</h3>
+<p>It’s kind a holy war, somebody thinks that everything should be in code.</p>
+
+<p>Give names to all constraints, i.e.</p>
+
+<p><code class="highlighter-rouge">CONSTRAINT pk_&lt;column_name&gt; PRIMARY KEY (column_name)</code></p>
+
+<p><code class="highlighter-rouge">CONSTRAINT fk_&lt;column_name&gt;  FOREIGN KEY (column_name)</code></p>
+
+<p><code class="highlighter-rouge">CONSTRAINT uq_&lt;column_name&gt; UNIQUE (column_name)</code></p>
+
+<p><code class="highlighter-rouge">CONSTRAINT ck_&lt;column_name&gt; CHECK (column_name &gt; 0)</code></p>
+
+<p><code class="highlighter-rouge">CONSTRAINT idx_&lt;column_name&gt; INDEX (column_name)</code></p>
+
+<p>Keep enum as constraints</p>
+
+<h3 id="use-incremental-db-changes">Use incremental DB changes</h3>
+<p>Consider using tools like LiquidBase or flyway.</p>
+
+
+  </div><a class="u-url" href="/csd/2018/03/25/database.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ravil Galeyev</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ravil Galeyev</li><li><a class="u-email" href="mailto:ravil@mailforspam.com">ravil@mailforspam.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/dehasi"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">dehasi</span></a></li><li><a href="https://www.twitter.com/rgaleyev"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">rgaleyev</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>There is no unique content. </p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
