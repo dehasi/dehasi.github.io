@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Test with Spring Cloud Contract | Ravil Galeyev</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Test with Spring Cloud Contract" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Spring cloud contract is a powerful tool for testing and mocking. In this post, I try to use Spring cloud contract to build a simple web application and show how Spring cloud contract can be helpful." />
+<meta property="og:description" content="Spring cloud contract is a powerful tool for testing and mocking. In this post, I try to use Spring cloud contract to build a simple web application and show how Spring cloud contract can be helpful." />
+<link rel="canonical" href="/notes/test-with-spring-cloud-contract.html" />
+<meta property="og:url" content="/notes/test-with-spring-cloud-contract.html" />
+<meta property="og:site_name" content="Ravil Galeyev" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2017-12-23T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Test with Spring Cloud Contract" />
+<script type="application/ld+json">
+{"datePublished":"2017-12-23T00:00:00-06:00","dateModified":"2017-12-23T00:00:00-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"/notes/test-with-spring-cloud-contract.html"},"description":"Spring cloud contract is a powerful tool for testing and mocking. In this post, I try to use Spring cloud contract to build a simple web application and show how Spring cloud contract can be helpful.","@type":"BlogPosting","url":"/notes/test-with-spring-cloud-contract.html","headline":"Test with Spring Cloud Contract","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Ravil Galeyev" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ravil Galeyev</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/speaking/">Speaking</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Test with Spring Cloud Contract</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2017-12-23T00:00:00-06:00" itemprop="datePublished">Dec 23, 2017
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Spring cloud contract is a powerful tool for testing and mocking. 
+In this post, I try to use Spring cloud contract to build a simple web application and show how Spring cloud contract can be helpful.</p>
+
+<p>Fist. I went to http://start.spring.io/ and generated a skeleton of my project. I added only JAX-RS and Spring cloud contract dependencies.</p>
+
+<p>Now I’m able to add a first controller. My app will say “hello”
+I.e. If I request <code class="language-plaintext highlighter-rouge">/greet/john</code> 
+I want to get a</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="nl">"greet"</span><span class="p">:</span><span class="s2">"Good afternoon John"</span><span class="p">}</span><span class="w"> </span></code></pre></figure>
+
+<p>as a response.</p>
+
+<p>First I should create a Controller which will process my requests. And create a base class for my auto-generated tests.
+Then. I’ll be able to create my first contract. 
+So at the beginning my controller, will look like:</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@RestController</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">GreetController</span>  <span class="o">{}</span></code></pre></figure>
+
+<p>an empty class. I’m not going to write code. Let’s create an environment first.</p>
+
+<p>Then I should create my base test class and add controller. I use http://rest-assured.io/ for testing.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">MvcTest</span> <span class="o">{</span>
+   <span class="nd">@Before</span>
+   <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setup</span><span class="o">()</span> <span class="o">{</span>
+       <span class="nc">RestAssuredMockMvc</span><span class="o">.</span><span class="na">standaloneSetup</span><span class="o">(</span><span class="k">new</span> <span class="nc">GreetController</span><span class="o">());</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Also, I should add a contract plugin to <code class="language-plaintext highlighter-rouge">pom.xml</code>. And put my <code class="language-plaintext highlighter-rouge">MvcTest</code> class to 
+<code class="language-plaintext highlighter-rouge">baseClassForTests</code> property.</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="nt">&lt;plugin&gt;</span>
+  <span class="nt">&lt;groupId&gt;</span>org.springframework.cloud<span class="nt">&lt;/groupId&gt;</span>
+  <span class="nt">&lt;artifactId&gt;</span>spring-cloud-contract-maven-plugin<span class="nt">&lt;/artifactId&gt;</span>
+  <span class="nt">&lt;version&gt;</span>1.2.1.RELEASE<span class="nt">&lt;/version&gt;</span>
+  <span class="nt">&lt;extensions&gt;</span>true<span class="nt">&lt;/extensions&gt;</span>
+  <span class="nt">&lt;configuration&gt;</span>
+     <span class="c">&lt;!-- Provide the base class for your auto-generated tests --&gt;</span>
+     <span class="nt">&lt;baseClassForTests&gt;</span>me.greet.greet.MvcTest<span class="nt">&lt;/baseClassForTests&gt;</span>
+  <span class="nt">&lt;/configuration&gt;</span>
+<span class="nt">&lt;/plugin&gt;</span></code></pre></figure>
+
+<p>And now I can create my first contract. It should be a groovy file in 
+<code class="language-plaintext highlighter-rouge">\src\test\resources\contracts</code> folder. I put mine in <code class="language-plaintext highlighter-rouge">\src\test\resources\contracts\greet\afternoon_greet.groovy</code></p>
+
+<figure class="highlight"><pre><code class="language-groovy" data-lang="groovy"><span class="n">org</span><span class="o">.</span><span class="na">springframework</span><span class="o">.</span><span class="na">cloud</span><span class="o">.</span><span class="na">contract</span><span class="o">.</span><span class="na">spec</span><span class="o">.</span><span class="na">Contract</span><span class="o">.</span><span class="na">make</span> <span class="o">{</span>
+   <span class="n">request</span> <span class="o">{</span>
+       <span class="n">method</span> <span class="s1">'GET'</span>
+       <span class="n">urlPath</span><span class="o">(</span><span class="s1">'/greet/john'</span><span class="o">)</span>
+   <span class="o">}</span>
+   <span class="n">response</span> <span class="o">{</span>
+       <span class="n">status</span> <span class="mi">200</span>
+       <span class="nf">body</span><span class="o">(</span>
+               <span class="s1">'''
+               {
+                 "greet": "Good afternoon John"
+               }
+               '''</span>
+       <span class="o">)</span>
+       <span class="n">headers</span> <span class="o">{</span>
+           <span class="n">header</span><span class="o">(</span><span class="s1">'Content-Type'</span><span class="o">,</span> <span class="s1">'application/json;charset=UTF-8'</span><span class="o">)</span>
+       <span class="o">}</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Now, if I <code class="language-plaintext highlighter-rouge">run mvn clean verify</code>, I’ll get</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Failed tests:
+  GreetTest.validate_afternoon_greet:26 expected:&lt;[200]&gt; but was:&lt;[404]&gt;
+</code></pre></div></div>
+<p>Which is quite obvious. 
+Before fixing the test. Let’s look at other options, which SCC gives to us.</p>
+
+<h3 id="spring-cloud-contractgeneratetests">spring-cloud-contract:generateTests</h3>
+<p>Generates unit-tests from contracts, and put them into <code class="language-plaintext highlighter-rouge">\target\generated-test-sources\contracts</code>
+The test, which was generated by my contact locates in <code class="language-plaintext highlighter-rouge">\target\generated-test-sources\contracts\me\greet\greet\GreetTest.java</code>
+Let’s look at it</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">GreetTest</span> <span class="kd">extends</span> <span class="nc">MvcTest</span> <span class="o">{</span>
+
+  <span class="nd">@Test</span>
+  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">validate_afternoon_greet</span><span class="o">()</span> <span class="kd">throws</span> <span class="nc">Exception</span> <span class="o">{</span>
+     <span class="c1">// given:</span>
+        <span class="nc">MockMvcRequestSpecification</span> <span class="n">request</span> <span class="o">=</span> <span class="n">given</span><span class="o">();</span>
+
+     <span class="c1">// when:</span>
+        <span class="nc">ResponseOptions</span> <span class="n">response</span> <span class="o">=</span> <span class="n">given</span><span class="o">().</span><span class="na">spec</span><span class="o">(</span><span class="n">request</span><span class="o">)</span>
+              <span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="s">"/greet/john"</span><span class="o">);</span>
+
+     <span class="c1">// then:</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">statusCode</span><span class="o">()).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="mi">200</span><span class="o">);</span>
+        <span class="n">assertThat</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">header</span><span class="o">(</span><span class="s">"Content-Type"</span><span class="o">)).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="s">"application/json;charset=UTF-8"</span><span class="o">);</span>
+     <span class="c1">// and:</span>
+        <span class="nc">DocumentContext</span> <span class="n">parsedJson</span> <span class="o">=</span> <span class="nc">JsonPath</span><span class="o">.</span><span class="na">parse</span><span class="o">(</span><span class="n">response</span><span class="o">.</span><span class="na">getBody</span><span class="o">().</span><span class="na">asString</span><span class="o">());</span>
+        <span class="n">assertThatJson</span><span class="o">(</span><span class="n">parsedJson</span><span class="o">).</span><span class="na">field</span><span class="o">(</span><span class="s">"['greet']"</span><span class="o">).</span><span class="na">isEqualTo</span><span class="o">(</span><span class="s">"Good afternoon John"</span><span class="o">);</span>
+  <span class="o">}</span>
+
+<span class="o">}</span></code></pre></figure>
+
+<h3 id="mvn-spring-cloud-contractconvert">mvn spring-cloud-contract:convert</h3>
+<p>Converts contracts  into WireMock stub mappings.http://wiremock.org  The mappings are json files and they stay in 
+<code class="language-plaintext highlighter-rouge">target\stubs\META-INF\me.greet\greet\0.0.1-SNAPSHOT\mappings</code>
+<code class="language-plaintext highlighter-rouge">target\stubs\META-INF\me.greet\greet\0.0.1-SNAPSHOT\mappings/greet/greet_afternoon.json</code> looks like</p>
+
+<figure class="highlight"><pre><code class="language-json" data-lang="json"><span class="p">{</span><span class="w">
+ </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1ed076d5-513f-417f-9c34-f6be58c72bbb"</span><span class="p">,</span><span class="w">
+ </span><span class="nl">"request"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+   </span><span class="nl">"urlPath"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"/greet/john"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"method"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"GET"</span><span class="w">
+ </span><span class="p">},</span><span class="w">
+ </span><span class="nl">"response"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+   </span><span class="nl">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"body"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"{</span><span class="se">\"</span><span class="s2">greet</span><span class="se">\"</span><span class="s2">:</span><span class="se">\"</span><span class="s2">Good afternoon John</span><span class="se">\"</span><span class="s2">}"</span><span class="p">,</span><span class="w">
+   </span><span class="nl">"headers"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+     </span><span class="nl">"Content-Type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"application/json;charset=UTF-8"</span><span class="w">
+   </span><span class="p">},</span><span class="w">
+   </span><span class="nl">"transformers"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="s2">"response-template"</span><span class="w"> </span><span class="p">]</span><span class="w">
+ </span><span class="p">},</span><span class="w">
+ </span><span class="nl">"uuid"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1ed076d5-513f-417f-9c34-f6be58c72bbb"</span><span class="w">
+</span><span class="p">}</span></code></pre></figure>
+
+<h3 id="mvn-spring-cloud-contractgeneratestubs">mvn spring-cloud-contract:generateStubs</h3>
+<p>Generate stubs from wiremock mappings. and out then to jar file
+<code class="language-plaintext highlighter-rouge">\target\greet-0.0.1-SNAPSHOT-stubs.jar</code></p>
+
+<h3 id="mvn-spring-cloud-contractrun">mvn spring-cloud-contract:run</h3>
+<p>Runs wiremock.  You something like below in logs</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[INFO] All stubs are now running RunningStubs [namesAndPorts={\target\stubs:+:stubs=8080}]
+[INFO] Press ENTER to continue...
+</code></pre></div></div>
+<p>if we go to <code class="language-plaintext highlighter-rouge">http://localhost:8080/greet/john</code> we get our expected result. But i.e. if we request
+<code class="language-plaintext highlighter-rouge">http://localhost:8080/greet/sam</code></p>
+
+<p>A useful error response</p>
+
+<p><img src="/assets/2017-12-23-tdd-with-scc.png" alt="My helpful screenshot" /></p>
+
+<p>At the end, let’s write the simplest version of controller and check that tests work.</p>
+
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@RestController</span>
+<span class="kd">public</span> <span class="kd">class</span> <span class="nc">GreetController</span> <span class="o">{</span>
+
+   <span class="nd">@GetMapping</span><span class="o">(</span><span class="s">"greet/john"</span><span class="o">)</span>
+   <span class="nc">Afternoon</span> <span class="nf">greet</span><span class="o">()</span> <span class="o">{</span>
+       <span class="k">return</span> <span class="k">new</span> <span class="nf">Afternoon</span><span class="o">(</span><span class="s">"Good afternoon John"</span><span class="o">);</span>
+   <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="kd">class</span> <span class="nc">Afternoon</span> <span class="o">{</span>
+   <span class="kd">private</span> <span class="kd">final</span> <span class="nc">String</span> <span class="n">greet</span><span class="o">;</span>
+
+   <span class="nc">Afternoon</span><span class="o">(</span><span class="nc">String</span> <span class="n">greet</span><span class="o">)</span> <span class="o">{</span>
+       <span class="k">this</span><span class="o">.</span><span class="na">greet</span> <span class="o">=</span> <span class="n">greet</span><span class="o">;</span>
+   <span class="o">}</span>
+
+   <span class="kd">public</span> <span class="nc">String</span> <span class="nf">getGreet</span><span class="o">()</span> <span class="o">{</span>
+       <span class="k">return</span> <span class="n">greet</span><span class="o">;</span>
+   <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Now, if I <code class="language-plaintext highlighter-rouge">run mvn clean verify</code>, I’ll get</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[INFO] BUILD SUCCESS
+</code></pre></div></div>
+
+
+  </div><a class="u-url" href="/notes/test-with-spring-cloud-contract.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Ravil Galeyev</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Ravil Galeyev</li><li><a class="u-email" href="mailto:ravil@mailforspam.com">ravil@mailforspam.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/dehasi"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">dehasi</span></a></li><li><a href="https://www.twitter.com/rgaleyev"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">rgaleyev</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>There is no unique content.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
