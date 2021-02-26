@@ -2,9 +2,9 @@
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Projects | Ravil Galeyev</title>
-<meta name="generator" content="Jekyll v3.6.3" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Projects" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="There is no unique content." />
@@ -12,8 +12,10 @@
 <link rel="canonical" href="/projects/" />
 <meta property="og:url" content="/projects/" />
 <meta property="og:site_name" content="Ravil Galeyev" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Projects" />
 <script type="application/ld+json">
-{"url":"/projects/","description":"There is no unique content.","@type":"WebPage","headline":"Projects","@context":"https://schema.org"}</script>
+{"@type":"WebPage","description":"There is no unique content.","headline":"Projects","url":"/projects/","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Ravil Galeyev" /></head>
 <body><header class="site-header" role="banner">
@@ -52,8 +54,8 @@ Also, provides pattern-matching for Java 8</p>
 
 <h4 id="examples">Examples</h4>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="n">Comparable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">val1</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">Comparable</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">val2</span> <span class="o">=</span> <span class="o">...</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Comparable</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">val1</span> <span class="o">=</span> <span class="o">...</span>
+<span class="nc">Comparable</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">val2</span> <span class="o">=</span> <span class="o">...</span>
 
 <span class="k">if</span> <span class="o">(</span><span class="n">the</span><span class="o">(</span><span class="n">val1</span><span class="o">).</span><span class="na">isGreaterThan</span><span class="o">(</span><span class="n">val2</span><span class="o">))</span> <span class="o">{</span>
     <span class="o">...</span>
@@ -63,10 +65,10 @@ Also, provides pattern-matching for Java 8</p>
     <span class="o">...</span>
 <span class="o">}</span></code></pre></figure>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">String</span> <span class="n">language</span> <span class="o">=</span> <span class="o">(</span><span class="n">args</span><span class="o">.</span><span class="na">length</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">?</span> <span class="s">"EN"</span> <span class="o">:</span> <span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nc">String</span> <span class="n">language</span> <span class="o">=</span> <span class="o">(</span><span class="n">args</span><span class="o">.</span><span class="na">length</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">?</span> <span class="s">"EN"</span> <span class="o">:</span> <span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
 
-    <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">when</span><span class="o">(</span><span class="n">language</span><span class="o">)</span>
+    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">when</span><span class="o">(</span><span class="n">language</span><span class="o">)</span>
         <span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="s">"EN"</span><span class="o">).</span><span class="na">then</span><span class="o">(</span><span class="s">"Hello!"</span><span class="o">)</span>
         <span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="s">"FE"</span><span class="o">).</span><span class="na">then</span><span class="o">(</span><span class="s">"Salut!"</span><span class="o">)</span>
         <span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="s">"ES"</span><span class="o">).</span><span class="na">then</span><span class="o">(</span><span class="s">"Hola!"</span><span class="o">)</span>

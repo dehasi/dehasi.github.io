@@ -2,9 +2,9 @@
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Unit testing | Ravil Galeyev</title>
-<meta name="generator" content="Jekyll v3.6.3" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Unit testing" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Split test into logical blocks There are three parts of test Prepare Act and Check;" />
@@ -14,8 +14,10 @@
 <meta property="og:site_name" content="Ravil Galeyev" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-03-24T16:02:28-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Unit testing" />
 <script type="application/ld+json">
-{"url":"/csd/2018/03/24/unit-testing.html","description":"Split test into logical blocks There are three parts of test Prepare Act and Check;","@type":"BlogPosting","headline":"Unit testing","dateModified":"2018-03-24T16:02:28-05:00","datePublished":"2018-03-24T16:02:28-05:00","mainEntityOfPage":{"@type":"WebPage","@id":"/csd/2018/03/24/unit-testing.html"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Split test into logical blocks There are three parts of test Prepare Act and Check;","headline":"Unit testing","dateModified":"2018-03-24T16:02:28-05:00","datePublished":"2018-03-24T16:02:28-05:00","url":"/csd/2018/03/24/unit-testing.html","mainEntityOfPage":{"@type":"WebPage","@id":"/csd/2018/03/24/unit-testing.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Ravil Galeyev" /></head>
 <body><header class="site-header" role="banner">
@@ -49,7 +51,7 @@
 <p>There are three parts of test Prepare Act and Check;</p>
 
 <p>It’s ok to add comments:
-<code class="highlighter-rouge">//given //when //then // and</code>
+<code class="language-plaintext highlighter-rouge">//given //when //then // and</code>
 but sometimes a blank line separator is enough.</p>
 
 <h3 id="one-test-checks-one-thing">One test checks one thing</h3>
@@ -65,7 +67,7 @@ But “one test - one assert” sounds fanatical.</p>
 
 <p>Don’t use ‘should’ word in test names. “shouldReturn…” can be simply replaced by “returns…”, “shouldThrow..” -&gt; “throws…”.</p>
 
-<p>The annotation <code class="highlighter-rouge">@Before</code> can be used few times that’s why it’s worth to give it some understandable name.</p>
+<p>The annotation <code class="language-plaintext highlighter-rouge">@Before</code> can be used few times that’s why it’s worth to give it some understandable name.</p>
 
 <figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nd">@Before</span> <span class="c1">//can be few methods</span>
 <span class="n">createMocks</span><span class="o">();</span> <span class="c1">// don’t just setUp</span></code></pre></figure>
@@ -73,7 +75,7 @@ But “one test - one assert” sounds fanatical.</p>
 <h3 id="think-if-you-need-to-test-a-private-method">Think if you need to test a private method</h3>
 <p>If you have a private method which needs to be tested, think twice. 
 Probably you have not good architecture. But if you want to test it anyway use<br />
-<code class="highlighter-rouge">@VisibleForTesting</code> annotation which says that this method should be private but it has the package-private access only for testing purpose.</p>
+<code class="language-plaintext highlighter-rouge">@VisibleForTesting</code> annotation which says that this method should be private but it has the package-private access only for testing purpose.</p>
 
 <h3 id="mvc-tests">MVC tests</h3>
 <p>Use mockmvc to test a controller layer. 
@@ -87,8 +89,8 @@ A good data gives move context.</p>
 
 <p>i.e.</p>
 
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">CARD_NUMBER</span> <span class="o">=</span> <span class="s">"a_card_number"</span><span class="o">;</span> <span class="c1">// wrong</span>
-<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="n">String</span> <span class="n">CARD_NUMBER</span> <span class="o">=</span> <span class="s">"SN123456"</span><span class="o">;</span> <span class="c1">//good</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">CARD_NUMBER</span> <span class="o">=</span> <span class="s">"a_card_number"</span><span class="o">;</span> <span class="c1">// wrong</span>
+<span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="nc">String</span> <span class="no">CARD_NUMBER</span> <span class="o">=</span> <span class="s">"SN123456"</span><span class="o">;</span> <span class="c1">//good</span></code></pre></figure>
 
 <h3 id="coverage">Coverage</h3>
 <p>Don’t write artificial tests to shut up Sonar. 

@@ -2,9 +2,9 @@
 <html lang="en"><head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
 <title>Versioning | Ravil Galeyev</title>
-<meta name="generator" content="Jekyll v3.6.3" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Versioning" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Versioning 1 Every change should have a (jira) ticket." />
@@ -14,8 +14,10 @@
 <meta property="og:site_name" content="Ravil Galeyev" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-03-09T15:02:28-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Versioning" />
 <script type="application/ld+json">
-{"url":"/csd/2018/03/09/git-conventions.html","description":"Versioning 1 Every change should have a (jira) ticket.","@type":"BlogPosting","headline":"Versioning","dateModified":"2018-03-09T15:02:28-06:00","datePublished":"2018-03-09T15:02:28-06:00","mainEntityOfPage":{"@type":"WebPage","@id":"/csd/2018/03/09/git-conventions.html"},"@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","description":"Versioning 1 Every change should have a (jira) ticket.","headline":"Versioning","dateModified":"2018-03-09T15:02:28-06:00","datePublished":"2018-03-09T15:02:28-06:00","url":"/csd/2018/03/09/git-conventions.html","mainEntityOfPage":{"@type":"WebPage","@id":"/csd/2018/03/09/git-conventions.html"},"@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Ravil Galeyev" /></head>
 <body><header class="site-header" role="banner">
@@ -53,7 +55,7 @@ Versions should look like a</p>
 
 <p>MAJOR.MINOR.PATCH</p>
 
-<p>3 <code class="highlighter-rouge">develop</code> branch is one step ahead from the master and has a <code class="highlighter-rouge">SNAPSHOT</code> prefix</p>
+<p>3 <code class="language-plaintext highlighter-rouge">develop</code> branch is one step ahead from the master and has a <code class="language-plaintext highlighter-rouge">SNAPSHOT</code> prefix</p>
 
 <table>
   <tbody>
@@ -69,9 +71,9 @@ Versions should look like a</p>
 </table>
 
 <p>4 It’s worth to bind versions to some understandable things.
-<code class="highlighter-rouge">major_release.spring_number.in_spring_release</code></p>
+<code class="language-plaintext highlighter-rouge">major_release.spring_number.in_spring_release</code></p>
 
-<p>It’s also compatible with Semantic Versioning when we start from <code class="highlighter-rouge">0.1.0</code> (Sprint 1) and increase major version with some significant changes (i.e. going to production, starting the new phase, etc..).</p>
+<p>It’s also compatible with Semantic Versioning when we start from <code class="language-plaintext highlighter-rouge">0.1.0</code> (Sprint 1) and increase major version with some significant changes (i.e. going to production, starting the new phase, etc..).</p>
 
 <p>5 You change it – you own it</p>
 
@@ -88,23 +90,23 @@ It means you can (and have to) make some refactoring there. Also, reviewers will
 <p>refactoring/</p>
 
 <p>A branch name should contain a ticket number.
-i.e. <code class="highlighter-rouge">feature/jira-43-add-super-feature</code></p>
+i.e. <code class="language-plaintext highlighter-rouge">feature/jira-43-add-super-feature</code></p>
 
 <p>Sometimes it might be worth to add also a sprint number.
- <code class="highlighter-rouge">feature/i34-jira-43-add-super-feature</code>
+ <code class="language-plaintext highlighter-rouge">feature/i34-jira-43-add-super-feature</code>
 But the period of branch life should be short (from a couple of hours to a couple of days).
 That’s why it’s not always necessary.</p>
 
-<p>Each developer’s branch is merged to <code class="highlighter-rouge">develop</code></p>
+<p>Each developer’s branch is merged to <code class="language-plaintext highlighter-rouge">develop</code></p>
 
 <h3 id="commits">Commits</h3>
 <p>Each commit message has to start with a (jira) ticket number.</p>
 
 <p>I.e.
-<code class="highlighter-rouge">[JIRA-01] Fix something</code></p>
+<code class="language-plaintext highlighter-rouge">[JIRA-01] Fix something</code></p>
 
 <p>There is a regexp which can help
-<code class="highlighter-rouge">(Merge.*|\[JIRA-\d+\] [A-Z].{,49}[^.]$)</code>
+<code class="language-plaintext highlighter-rouge">(Merge.*|\[JIRA-\d+\] [A-Z].{,49}[^.]$)</code>
 you can make your own prefix and debug it <a href="https://www.debuggex.com/">here</a></p>
 
 <p>Commit message shall follow the following rules:</p>
@@ -130,7 +132,7 @@ you can make your own prefix and debug it <a href="https://www.debuggex.com/">he
 
 <h3 id="merge-requests">Merge requests</h3>
 <p>Add a task number to the merge request title
-<code class="highlighter-rouge">JIRA-43 Implement useful feature</code></p>
+<code class="language-plaintext highlighter-rouge">JIRA-43 Implement useful feature</code></p>
 
 <p>Add description and labels if needed</p>
 
@@ -144,7 +146,7 @@ you can make your own prefix and debug it <a href="https://www.debuggex.com/">he
 <p><em>ditto:</em> the same thing again, when you already explained your point above.</p>
 
 <p><em>nit:</em> a small change that may not be very important, 
-but is technically correct. In example <code class="highlighter-rouge">nit: remove whitespace.</code></p>
+but is technically correct. In example <code class="language-plaintext highlighter-rouge">nit: remove whitespace.</code></p>
 
 <p><em>LGTM:</em> Looks Good To Me</p>
 
