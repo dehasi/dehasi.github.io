@@ -6,6 +6,7 @@
 <title>Unit testing | Ravil Galeyev</title>
 <meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Unit testing" />
+<meta name="author" content="dehasi" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="Split test into logical blocks There are three parts of test Prepare Act and Check;" />
 <meta property="og:description" content="Split test into logical blocks There are three parts of test Prepare Act and Check;" />
@@ -17,10 +18,36 @@
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Unit testing" />
 <script type="application/ld+json">
-{"description":"Split test into logical blocks There are three parts of test Prepare Act and Check;","@type":"BlogPosting","headline":"Unit testing","dateModified":"2018-03-25T00:00:00-05:00","datePublished":"2018-03-25T00:00:00-05:00","url":"/notes/unit-testing.html","mainEntityOfPage":{"@type":"WebPage","@id":"/notes/unit-testing.html"},"@context":"https://schema.org"}</script>
+{"headline":"Unit testing","dateModified":"2018-03-25T00:00:00-05:00","datePublished":"2018-03-25T00:00:00-05:00","author":{"@type":"Person","name":"dehasi"},"url":"/notes/unit-testing.html","mainEntityOfPage":{"@type":"WebPage","@id":"/notes/unit-testing.html"},"description":"Split test into logical blocks There are three parts of test Prepare Act and Check;","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Ravil Galeyev" /></head>
-<body><header class="site-header" role="banner">
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Ravil Galeyev" /><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+    equationNumbers: { autoNumber: "AMS" },
+    tagSide: "right"
+    },
+    tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: true
+    }
+});
+MathJax.Hub.Register.StartupHook("TeX AMSmath Ready", function () {
+    MathJax.InputJax.TeX.Stack.Item.AMSarray.Augment({
+    clearTag() {
+        if (!this.global.notags) {
+        this.super(arguments).clearTag.call(this);
+        }
+    }
+    });
+});
+</script>
+<script type="text/javascript" charset="utf-8"
+src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+</head>
+<body><header class="site-header">
 
   <div class="wrapper"><a class="site-title" rel="author" href="/">Ravil Galeyev</a><nav class="site-nav">
         <input type="checkbox" id="nav-trigger" class="nav-trigger" />
@@ -41,8 +68,8 @@
 
   <header class="post-header">
     <h1 class="post-title p-name" itemprop="name headline">Unit testing</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="2018-03-25T00:00:00-05:00" itemprop="datePublished">Mar 25, 2018
+    <p class="post-meta"><time class="dt-published" datetime="2018-03-25T00:00:00-05:00" itemprop="datePublished">
+        Mar 25, 2018
       </time></p>
   </header>
 
@@ -115,21 +142,27 @@ Test coverage should say which logic is not covered yet and should be covered. T
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Ravil Galeyev</h2>
-
     <div class="footer-col-wrapper">
-      <div class="footer-col footer-col-1">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
         <ul class="contact-list">
-          <li class="p-name">Ravil Galeyev</li><li><a class="u-email" href="mailto:ravil@mailforspam.com">ravil@mailforspam.com</a></li></ul>
+          <li class="p-name">dehasi</li>
+          <li><a class="u-email" href="mailto:ravil@mailforspam.com">ravil@mailforspam.com</a></li>
+        </ul>
       </div>
-
-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/dehasi"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">dehasi</span></a></li><li><a href="https://www.twitter.com/rgaleyev"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">rgaleyev</span></a></li></ul>
-</div>
-
-      <div class="footer-col footer-col-3">
+      <div class="footer-col">
         <p>There is no unique content.</p>
       </div>
     </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/jekyll" title="jekyll"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/jekyllrb" title="jekyllrb"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
 
   </div>
 

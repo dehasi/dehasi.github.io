@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Add AsciiDoc to Jekyll | Ravil Galeyev</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Add AsciiDoc to Jekyll" />
+<meta name="author" content="dehasi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="It&#8217;s mostly copy-paste this source" />
+<meta property="og:description" content="It&#8217;s mostly copy-paste this source" />
+<link rel="canonical" href="/notes/add-asciidoc-to-jekyll.html" />
+<meta property="og:url" content="/notes/add-asciidoc-to-jekyll.html" />
+<meta property="og:site_name" content="Ravil Galeyev" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-04-12T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Add AsciiDoc to Jekyll" />
+<script type="application/ld+json">
+{"headline":"Add AsciiDoc to Jekyll","dateModified":"2021-04-12T00:00:00-05:00","datePublished":"2021-04-12T00:00:00-05:00","author":{"@type":"Person","name":"dehasi"},"url":"/notes/add-asciidoc-to-jekyll.html","mainEntityOfPage":{"@type":"WebPage","@id":"/notes/add-asciidoc-to-jekyll.html"},"description":"It&#8217;s mostly copy-paste this source","@type":"BlogPosting","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Ravil Galeyev" /><script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    TeX: {
+    equationNumbers: { autoNumber: "AMS" },
+    tagSide: "right"
+    },
+    tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: true
+    }
+});
+MathJax.Hub.Register.StartupHook("TeX AMSmath Ready", function () {
+    MathJax.InputJax.TeX.Stack.Item.AMSarray.Augment({
+    clearTag() {
+        if (!this.global.notags) {
+        this.super(arguments).clearTag.call(this);
+        }
+    }
+    });
+});
+</script>
+<script type="text/javascript" charset="utf-8"
+src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Ravil Galeyev</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/projects/">Projects</a><a class="page-link" href="/notes/">Notes</a><a class="page-link" href="/speaking/">Speaking</a><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Add AsciiDoc to Jekyll</h1>
+    <p class="post-meta"><time class="dt-published" datetime="2021-04-12T00:00:00-05:00" itemprop="datePublished">
+        Apr 12, 2021
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>It&#8217;s mostly copy-paste <a href="https://www.crystal-growth.net/jekyll/2020/10/16/jekyll-setup.html">this</a> source</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="update-gemfile-to-have-asciidoc">Update Gemfile to have asciidoc</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-ruby" data-lang="ruby">gem "minima", github: "jekyll/minima" // <b class="conum">(1)</b>
+
+group :jekyll_plugins do
+  gem "jekyll-feed", "~&gt; 0.12"
+
+  gem 'jekyll-asciidoc' // <b class="conum">(2)</b>
+  gem 'jekyll-archives'
+  gem 'asciidoctor-diagram'
+end</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>To be able to add extentions to headers</p>
+</li>
+<li>
+<p>Asciidoc gems</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Update <code>_config.yaml</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-yaml" data-lang="yaml">plugins:
+  - jekyll-feed
+  - jekyll-asciidoc
+
+asciidoctor: <b class="conum">(1)</b>
+  attributes:
+    - imagesdir=/assets/images
+    - imagesoutdir=/assets/images</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<ol>
+<li>
+<p>To be able to use plantUml</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="extend-header-to-use-latex">Extend header to use latex</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Create <code>_includes/custom-head.html</code> and add the following content</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-xml" data-lang="xml">&lt;script type="text/x-mathjax-config"&gt;
+MathJax.Hub.Config({
+    TeX: {
+    equationNumbers: { autoNumber: "AMS" },
+    tagSide: "right"
+    },
+    tex2jax: {
+    inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+    processEscapes: true
+    }
+});
+MathJax.Hub.Register.StartupHook("TeX AMSmath Ready", function () {
+    MathJax.InputJax.TeX.Stack.Item.AMSarray.Augment({
+    clearTag() {
+        if (!this.global.notags) {
+        this.super(arguments).clearTag.call(this);
+        }
+    }
+    });
+});
+&lt;/script&gt;
+&lt;script type="text/javascript" charset="utf-8"
+src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML"&gt;
+&lt;/script&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Add the following headers</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-asciidoc" data-lang="asciidoc">:eqnums:
+:stem: latexmath</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then you can use equations
+\(C = \alpha + \beta Y^{\gamma} + \epsilon\)</p>
+</div>
+<div class="paragraph">
+<p>This is a numbered equation \eqref{myequation}</p>
+</div>
+<div class="paragraph">
+<p>PlantUML diagrams as well</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="/assets/images/jekyll-asciidoc-expample.png" alt="jekyll asciidoc expample" width="83" height="155">
+</div>
+</div>
+<div class="stemblock">
+<div class="content">
+\[\begin{equation}\label{myequation}
+c^2 = a^2 + b^2 + 5
+\end{equation}\]
+</div>
+</div>
+<div class="sect2">
+<h3 id="build-from-docker">Build from docker</h3>
+<div class="paragraph">
+<p>Original Jekyll images uses Arch linux with minimal setup. And there is no requreeed fonts.
+We need to exted it</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-dockerfile" data-lang="dockerfile">FROM jekyll/builder:4
+
+RUN apk update &amp;&amp; apk upgrade &amp;&amp; \
+    apk add --no-cache fontconfig ttf-dejavu
+
+RUN mkdir /graphviz &amp;&amp; \
+  apk add --update graphviz
+
+# docker build . -t dehasi/jekyll</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+  </div><a class="u-url" href="/notes/add-asciidoc-to-jekyll.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+        <ul class="contact-list">
+          <li class="p-name">dehasi</li>
+          <li><a class="u-email" href="mailto:ravil@mailforspam.com">ravil@mailforspam.com</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p>There is no unique content.</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li><a rel="me" href="https://github.com/jekyll" title="jekyll"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg></a></li><li><a rel="me" href="https://twitter.com/jekyllrb" title="jekyllrb"><svg class="svg-icon grey"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg></a></li></ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
