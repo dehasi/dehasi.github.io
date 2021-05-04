@@ -1,7 +1,29 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-04-15T13:09:28-05:00</updated><id>/feed.xml</id><title type="html">Ravil Galeyev</title><subtitle>There is no unique content.</subtitle><author><name>dehasi</name><email>ravil@mailforspam.com</email></author><entry><title type="html">Add AsciiDoc to Jekyll</title><link href="/notes/add-asciidoc-to-jekyll.html" rel="alternate" type="text/html" title="Add AsciiDoc to Jekyll" /><published>2021-04-12T00:00:00-05:00</published><updated>2021-04-12T00:00:00-05:00</updated><id>/notes/add-asciidoc-to-jekyll</id><content type="html" xml:base="/notes/add-asciidoc-to-jekyll.html">&lt;div id=&quot;preamble&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2021-05-04T16:40:35-05:00</updated><id>/feed.xml</id><title type="html">Ravil Galeyev</title><subtitle>There is no unique content.</subtitle><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><entry><title type="html">Add AsciiDoc to Jekyll</title><link href="/notes/add-asciidoc-to-jekyll.html" rel="alternate" type="text/html" title="Add AsciiDoc to Jekyll" /><published>2021-04-12T00:00:00-05:00</published><updated>2021-04-12T00:00:00-05:00</updated><id>/notes/add-asciidoc-to-jekyll</id><content type="html" xml:base="/notes/add-asciidoc-to-jekyll.html">&lt;div id=&quot;preamble&quot;&gt;
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;It&amp;#8217;s mostly copy-paste &lt;a href=&quot;https://www.crystal-growth.net/jekyll/2020/10/16/jekyll-setup.html&quot;&gt;this&lt;/a&gt; source&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s mostly copy-paste of &lt;a href=&quot;https://www.crystal-growth.net/jekyll/2020/10/16/jekyll-setup.html&quot;&gt;this&lt;/a&gt; source&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;build-from-docker&quot;&gt;Build from docker&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Original Jekyll images uses Arch linux with minimal setup. And there is no requreeed fonts.
+We need to exted it&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;rouge highlight&quot;&gt;&lt;code data-lang=&quot;dockerfile&quot;&gt;&lt;span class=&quot;k&quot;&gt;FROM&lt;/span&gt;&lt;span class=&quot;s&quot;&gt; jekyll/builder:4&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;apk update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apk upgrade &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;    apk add &lt;span class=&quot;nt&quot;&gt;--no-cache&lt;/span&gt; fontconfig ttf-dejavu
+
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;mkdir&lt;/span&gt; /graphviz &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;  apk add &lt;span class=&quot;nt&quot;&gt;--update&lt;/span&gt; graphviz
+
+&lt;span class=&quot;c&quot;&gt;# docker build . -t dehasi/jekyll:4&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -10,15 +32,15 @@
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlight&quot;&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;gem &quot;minima&quot;, github: &quot;jekyll/minima&quot; // &lt;b class=&quot;conum&quot;&gt;(1)&lt;/b&gt;
+&lt;pre class=&quot;rouge highlight&quot;&gt;&lt;code data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;minima&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;github: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;jekyll/minima&quot;&lt;/span&gt; // &lt;b class=&quot;conum&quot;&gt;(1)&lt;/b&gt;
 
-group :jekyll_plugins do
-  gem &quot;jekyll-feed&quot;, &quot;~&amp;gt; 0.12&quot;
+&lt;span class=&quot;n&quot;&gt;group&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:jekyll_plugins&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;jekyll-feed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;~&amp;gt; 0.12&quot;&lt;/span&gt;
 
-  gem 'jekyll-asciidoc' // &lt;b class=&quot;conum&quot;&gt;(2)&lt;/b&gt;
-  gem 'jekyll-archives'
-  gem 'asciidoctor-diagram'
-end&lt;/code&gt;&lt;/pre&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jekyll-asciidoc'&lt;/span&gt; // &lt;b class=&quot;conum&quot;&gt;(2)&lt;/b&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'jekyll-archives'&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'asciidoctor-diagram'&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;colist arabic&quot;&gt;
@@ -36,14 +58,14 @@ end&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlight&quot;&gt;&lt;code class=&quot;language-yaml&quot; data-lang=&quot;yaml&quot;&gt;plugins:
-  - jekyll-feed
-  - jekyll-asciidoc
+&lt;pre class=&quot;rouge highlight&quot;&gt;&lt;code data-lang=&quot;yaml&quot;&gt;&lt;span class=&quot;na&quot;&gt;plugins&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-feed&lt;/span&gt;
+  &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;jekyll-asciidoc&lt;/span&gt;
 
-asciidoctor: &lt;b class=&quot;conum&quot;&gt;(1)&lt;/b&gt;
-  attributes:
-    - imagesdir=/assets/images
-    - imagesoutdir=/assets/images&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;na&quot;&gt;asciidoctor&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;b class=&quot;conum&quot;&gt;(1)&lt;/b&gt;
+  &lt;span class=&quot;na&quot;&gt;attributes&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;imagesdir=/assets/images&lt;/span&gt;
+    &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;imagesoutdir=/assets/images&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;colist arabic&quot;&gt;
@@ -56,6 +78,19 @@ asciidoctor: &lt;b class=&quot;conum&quot;&gt;(1)&lt;/b&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;source-highlighting&quot;&gt;Source highlighting&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;To highlight systax add the following header&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;rouge highlight&quot;&gt;&lt;code data-lang=&quot;asciidoc&quot;&gt;:source-highlighter: rouge&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
 &lt;h2 id=&quot;extend-header-to-use-latex&quot;&gt;Extend header to use latex&lt;/h2&gt;
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -63,7 +98,7 @@ asciidoctor: &lt;b class=&quot;conum&quot;&gt;(1)&lt;/b&gt;
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlight&quot;&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&amp;lt;script type=&quot;text/x-mathjax-config&quot;&amp;gt;
+&lt;pre class=&quot;rouge highlight&quot;&gt;&lt;code data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/x-mathjax-config&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
 MathJax.Hub.Config({
     TeX: {
     equationNumbers: { autoNumber: &quot;AMS&quot; },
@@ -84,10 +119,10 @@ MathJax.Hub.Register.StartupHook(&quot;TeX AMSmath Ready&quot;, function () {
     }
     });
 });
-&amp;lt;/script&amp;gt;
-&amp;lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot;
-src=&quot;https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML&quot;&amp;gt;
-&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;script&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;type=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;charset=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;utf-8&quot;&lt;/span&gt;
+&lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -95,7 +130,7 @@ src=&quot;https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML
 &lt;/div&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlight&quot;&gt;&lt;code class=&quot;language-asciidoc&quot; data-lang=&quot;asciidoc&quot;&gt;:eqnums:
+&lt;pre class=&quot;rouge highlight&quot;&gt;&lt;code data-lang=&quot;asciidoc&quot;&gt;:eqnums:
 :stem: latexmath&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -121,28 +156,8 @@ c^2 = a^2 + b^2 + 5
 \end{equation}\]
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;div class=&quot;sect2&quot;&gt;
-&lt;h3 id=&quot;build-from-docker&quot;&gt;Build from docker&lt;/h3&gt;
-&lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;Original Jekyll images uses Arch linux with minimal setup. And there is no requreeed fonts.
-We need to exted it&lt;/p&gt;
 &lt;/div&gt;
-&lt;div class=&quot;listingblock&quot;&gt;
-&lt;div class=&quot;content&quot;&gt;
-&lt;pre class=&quot;highlight&quot;&gt;&lt;code class=&quot;language-dockerfile&quot; data-lang=&quot;dockerfile&quot;&gt;FROM jekyll/builder:4
-
-RUN apk update &amp;amp;&amp;amp; apk upgrade &amp;amp;&amp;amp; \
-    apk add --no-cache fontconfig ttf-dejavu
-
-RUN mkdir /graphviz &amp;amp;&amp;amp; \
-  apk add --update graphviz
-
-# docker build . -t dehasi/jekyll&lt;/code&gt;&lt;/pre&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>ravil@mailforspam.com</email></author><summary type="html">It&amp;#8217;s mostly copy-paste this source</summary></entry><entry><title type="html">Database</title><link href="/notes/database.html" rel="alternate" type="text/html" title="Database" /><published>2018-03-26T00:00:00-05:00</published><updated>2018-03-26T00:00:00-05:00</updated><id>/notes/database</id><content type="html" xml:base="/notes/database.html">&lt;h3 id=&quot;give-a-proper-name-to-tables&quot;&gt;Give a proper name to tables&lt;/h3&gt;
+&lt;/div&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><summary type="html">It&amp;#8217;s mostly copy-paste of this source</summary></entry><entry><title type="html">Database</title><link href="/notes/database.html" rel="alternate" type="text/html" title="Database" /><published>2018-03-26T00:00:00-05:00</published><updated>2018-03-26T00:00:00-05:00</updated><id>/notes/database</id><content type="html" xml:base="/notes/database.html">&lt;h3 id=&quot;give-a-proper-name-to-tables&quot;&gt;Give a proper name to tables&lt;/h3&gt;
 &lt;p&gt;Sometimes it’s worth to add special suffixes and prefixes like&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;T_NAME_V&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;T_NAME_E&lt;/code&gt;, etc..&lt;/p&gt;
@@ -216,7 +231,7 @@ RUN mkdir /graphviz &amp;amp;&amp;amp; \
 &lt;p&gt;Keep enum as constraints&lt;/p&gt;
 
 &lt;h3 id=&quot;use-incremental-db-changes&quot;&gt;Use incremental DB changes&lt;/h3&gt;
-&lt;p&gt;Consider using tools like LiquidBase or flyway.&lt;/p&gt;</content><author><name>dehasi</name><email>ravil@mailforspam.com</email></author><summary type="html">Give a proper name to tables Sometimes it’s worth to add special suffixes and prefixes like</summary></entry><entry><title type="html">Unit testing</title><link href="/notes/unit-testing.html" rel="alternate" type="text/html" title="Unit testing" /><published>2018-03-25T00:00:00-05:00</published><updated>2018-03-25T00:00:00-05:00</updated><id>/notes/unit-testing</id><content type="html" xml:base="/notes/unit-testing.html">&lt;h3 id=&quot;split-test-into-logical-blocks&quot;&gt;Split test into logical blocks&lt;/h3&gt;
+&lt;p&gt;Consider using tools like LiquidBase or flyway.&lt;/p&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><summary type="html">Give a proper name to tables Sometimes it’s worth to add special suffixes and prefixes like</summary></entry><entry><title type="html">Unit testing</title><link href="/notes/unit-testing.html" rel="alternate" type="text/html" title="Unit testing" /><published>2018-03-25T00:00:00-05:00</published><updated>2018-03-25T00:00:00-05:00</updated><id>/notes/unit-testing</id><content type="html" xml:base="/notes/unit-testing.html">&lt;h3 id=&quot;split-test-into-logical-blocks&quot;&gt;Split test into logical blocks&lt;/h3&gt;
 &lt;p&gt;There are three parts of test Prepare Act and Check;&lt;/p&gt;
 
 &lt;p&gt;It’s ok to add comments:
@@ -272,7 +287,7 @@ Test coverage should say which logic is not covered yet and should be covered. T
 
 &lt;p&gt;&lt;a href=&quot;https://docs.spring.io/spring-security/site/docs/current/reference/html/test-mockmvc.html&quot;&gt;Spring MVC Test Integration&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://martinfowler.com/bliki/TestCoverage.html&quot;&gt;Martin Fowler: test coverage&lt;/a&gt;&lt;/p&gt;</content><author><name>dehasi</name><email>ravil@mailforspam.com</email></author><summary type="html">Split test into logical blocks There are three parts of test Prepare Act and Check;</summary></entry><entry><title type="html">Versioning</title><link href="/notes/git-conventions.html" rel="alternate" type="text/html" title="Versioning" /><published>2018-03-09T00:00:00-06:00</published><updated>2018-03-09T00:00:00-06:00</updated><id>/notes/git-conventions</id><content type="html" xml:base="/notes/git-conventions.html">&lt;h3 id=&quot;versioning&quot;&gt;Versioning&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;https://martinfowler.com/bliki/TestCoverage.html&quot;&gt;Martin Fowler: test coverage&lt;/a&gt;&lt;/p&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><summary type="html">Split test into logical blocks There are three parts of test Prepare Act and Check;</summary></entry><entry><title type="html">Versioning</title><link href="/notes/git-conventions.html" rel="alternate" type="text/html" title="Versioning" /><published>2018-03-09T00:00:00-06:00</published><updated>2018-03-09T00:00:00-06:00</updated><id>/notes/git-conventions</id><content type="html" xml:base="/notes/git-conventions.html">&lt;h3 id=&quot;versioning&quot;&gt;Versioning&lt;/h3&gt;
 &lt;p&gt;1 Every change should have a (jira) ticket.&lt;/p&gt;
 
 &lt;p&gt;2 It’s worth to use &lt;a href=&quot;https://semver.org/&quot;&gt;Semantic Versioning&lt;/a&gt;
@@ -395,7 +410,7 @@ but is technically correct. In example &lt;code class=&quot;language-plaintext h
 
 &lt;p&gt;&lt;a href=&quot;https://chris.beams.io/posts/git-commit/&quot;&gt;How to Write a Git Commit Message&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;A successful Git branching model&lt;/a&gt;&lt;/p&gt;</content><author><name>dehasi</name><email>ravil@mailforspam.com</email></author><summary type="html">Versioning 1 Every change should have a (jira) ticket.</summary></entry><entry><title type="html">Mock with Spring Cloud Contract</title><link href="/notes/mock-with-spring-cloud-contract.html" rel="alternate" type="text/html" title="Mock with Spring Cloud Contract" /><published>2018-02-28T00:00:00-06:00</published><updated>2018-02-28T00:00:00-06:00</updated><id>/notes/mock-with-spring-cloud-contract</id><content type="html" xml:base="/notes/mock-with-spring-cloud-contract.html">&lt;p&gt;There are a couple of examples, where an API contract exists.
+&lt;p&gt;&lt;a href=&quot;http://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;A successful Git branching model&lt;/a&gt;&lt;/p&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><summary type="html">Versioning 1 Every change should have a (jira) ticket.</summary></entry><entry><title type="html">Mock with Spring Cloud Contract</title><link href="/notes/mock-with-spring-cloud-contract.html" rel="alternate" type="text/html" title="Mock with Spring Cloud Contract" /><published>2018-02-28T00:00:00-06:00</published><updated>2018-02-28T00:00:00-06:00</updated><id>/notes/mock-with-spring-cloud-contract</id><content type="html" xml:base="/notes/mock-with-spring-cloud-contract.html">&lt;p&gt;There are a couple of examples, where an API contract exists.
 I.e when there are a backend and a frontend parts. They both can be developed separately. 
 Sometimes people create mock servers to stub responses from a backend. But there is a risk, 
 that contract can be changed, but the mock server can’t. In this case, this inconsistency will be caught only in integration part.&lt;/p&gt;
@@ -465,7 +480,7 @@ http://localhost:8080/greet/john
 we will receive our expected response 
 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{&quot;greet&quot;:&quot;Good afternoon John&quot;}&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;So now we can give the mocks to our frontend team and they can be sure, that they use the actual API.&lt;/p&gt;</content><author><name>dehasi</name><email>ravil@mailforspam.com</email></author><summary type="html">There are a couple of examples, where an API contract exists. I.e when there are a backend and a frontend parts. They both can be developed separately. Sometimes people create mock servers to stub responses from a backend. But there is a risk, that contract can be changed, but the mock server can’t. In this case, this inconsistency will be caught only in integration part.</summary></entry><entry><title type="html">Test with Spring Cloud Contract</title><link href="/notes/test-with-spring-cloud-contract.html" rel="alternate" type="text/html" title="Test with Spring Cloud Contract" /><published>2017-12-23T00:00:00-06:00</published><updated>2017-12-23T00:00:00-06:00</updated><id>/notes/test-with-spring-cloud-contract</id><content type="html" xml:base="/notes/test-with-spring-cloud-contract.html">&lt;p&gt;Spring cloud contract is a powerful tool for testing and mocking. 
+&lt;p&gt;So now we can give the mocks to our frontend team and they can be sure, that they use the actual API.&lt;/p&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><summary type="html">There are a couple of examples, where an API contract exists. I.e when there are a backend and a frontend parts. They both can be developed separately. Sometimes people create mock servers to stub responses from a backend. But there is a risk, that contract can be changed, but the mock server can’t. In this case, this inconsistency will be caught only in integration part.</summary></entry><entry><title type="html">Test with Spring Cloud Contract</title><link href="/notes/test-with-spring-cloud-contract.html" rel="alternate" type="text/html" title="Test with Spring Cloud Contract" /><published>2017-12-23T00:00:00-06:00</published><updated>2017-12-23T00:00:00-06:00</updated><id>/notes/test-with-spring-cloud-contract</id><content type="html" xml:base="/notes/test-with-spring-cloud-contract.html">&lt;p&gt;Spring cloud contract is a powerful tool for testing and mocking. 
 In this post, I try to use Spring cloud contract to build a simple web application and show how Spring cloud contract can be helpful.&lt;/p&gt;
 
 &lt;p&gt;Fist. I went to http://start.spring.io/ and generated a skeleton of my project. I added only JAX-RS and Spring cloud contract dependencies.&lt;/p&gt;
@@ -629,7 +644,7 @@ Let’s look at it&lt;/p&gt;
 
 &lt;p&gt;Now, if I &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run mvn clean verify&lt;/code&gt;, I’ll get&lt;/p&gt;
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[INFO] BUILD SUCCESS
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>dehasi</name><email>ravil@mailforspam.com</email></author><summary type="html">Spring cloud contract is a powerful tool for testing and mocking. In this post, I try to use Spring cloud contract to build a simple web application and show how Spring cloud contract can be helpful.</summary></entry><entry><title type="html">My git aliases</title><link href="/notes/git-aliases.html" rel="alternate" type="text/html" title="My git aliases" /><published>2017-12-22T00:00:00-06:00</published><updated>2017-12-22T00:00:00-06:00</updated><id>/notes/git-aliases</id><content type="html" xml:base="/notes/git-aliases.html">&lt;p&gt;I had a problem with systax formatting. That’s why I’ve created a gist &lt;a href=&quot;https://gist.github.com/dehasi/5b498ccf29c1f5e74aca861dc7ffd461&quot;&gt;gist&lt;/a&gt;.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><summary type="html">Spring cloud contract is a powerful tool for testing and mocking. In this post, I try to use Spring cloud contract to build a simple web application and show how Spring cloud contract can be helpful.</summary></entry><entry><title type="html">My git aliases</title><link href="/notes/git-aliases.html" rel="alternate" type="text/html" title="My git aliases" /><published>2017-12-22T00:00:00-06:00</published><updated>2017-12-22T00:00:00-06:00</updated><id>/notes/git-aliases</id><content type="html" xml:base="/notes/git-aliases.html">&lt;p&gt;I had a problem with systax formatting. That’s why I’ve created a gist &lt;a href=&quot;https://gist.github.com/dehasi/5b498ccf29c1f5e74aca861dc7ffd461&quot;&gt;gist&lt;/a&gt;.&lt;/p&gt;
 
 &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# Switch to a branch, creating it if necessary
 go = &quot;!f() { git checkout -b \&quot;$1\&quot; 2&amp;gt; /dev/null || git checkout \&quot;$1\&quot;; }; f&quot;
@@ -661,7 +676,7 @@ oldest-ancestor = !zsh -c 'diff -u &amp;lt;(git rev-list --first-parent &quot;${
 lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&amp;lt;%an&amp;gt;%Creset' --abbrev-commit --date=relative
 logp = log --graph --abbrev-commit --decorate --all --format=format:\&quot;%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(dim white) - %an%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n %C(white)%s%C(reset)\&quot;
 last = diff HEAD~1...HEAD
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>dehasi</name><email>ravil@mailforspam.com</email></author><summary type="html">I had a problem with systax formatting. That’s why I’ve created a gist gist.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/notes/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-12-18T00:00:00-06:00</published><updated>2017-12-18T00:00:00-06:00</updated><id>/notes/welcome-to-jekyll</id><content type="html" xml:base="/notes/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><summary type="html">I had a problem with systax formatting. That’s why I’ve created a gist gist.</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/notes/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2017-12-18T00:00:00-06:00</published><updated>2017-12-18T00:00:00-06:00</updated><id>/notes/welcome-to-jekyll</id><content type="html" xml:base="/notes/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
@@ -673,7 +688,7 @@ last = diff HEAD~1...HEAD
 &lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>dehasi</name><email>ravil@mailforspam.com</email></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Mergesort with Fork Join Pool</title><link href="/notes/merge-sort-with-fork-join.html" rel="alternate" type="text/html" title="Mergesort with Fork Join Pool" /><published>2017-06-06T00:00:00-05:00</published><updated>2017-06-06T00:00:00-05:00</updated><id>/notes/merge-sort-with-fork-join</id><content type="html" xml:base="/notes/merge-sort-with-fork-join.html">&lt;p&gt;The simplest task which shows how the fork-join framework works is Mergesort. Mergesort is a simple and well-known algorithm for arrays sorting. 
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry><entry><title type="html">Mergesort with Fork Join Pool</title><link href="/notes/merge-sort-with-fork-join.html" rel="alternate" type="text/html" title="Mergesort with Fork Join Pool" /><published>2017-06-06T00:00:00-05:00</published><updated>2017-06-06T00:00:00-05:00</updated><id>/notes/merge-sort-with-fork-join</id><content type="html" xml:base="/notes/merge-sort-with-fork-join.html">&lt;p&gt;The simplest task which shows how the fork-join framework works is Mergesort. Mergesort is a simple and well-known algorithm for arrays sorting. 
 The main idea is split array for small chunks, sort them and then merge already sorted chunks in the one array.&lt;br /&gt;
 Fork join pool allows split each task to subtasks and execute it in parallel and then use the result.&lt;/p&gt;
 
@@ -842,7 +857,7 @@ I also wrote a function which generates an array and the function which tests is
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;List&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;list&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;asList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;stream&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parallel&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;sorted&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;collect&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;toList&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;This post is my attempt to learn jekyll and github pages. The oroginal of my post was published &lt;a href=&quot;https://rgaleyev.blogspot.com/2017/06/mergesort-with-fork-join-poll.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>dehasi</name><email>ravil@mailforspam.com</email></author><summary type="html">The simplest task which shows how the fork-join framework works is Mergesort. Mergesort is a simple and well-known algorithm for arrays sorting. The main idea is split array for small chunks, sort them and then merge already sorted chunks in the one array. Fork join pool allows split each task to subtasks and execute it in parallel and then use the result.</summary></entry><entry><title type="html">Comparator tricks</title><link href="/notes/comparator-tricks.html" rel="alternate" type="text/html" title="Comparator tricks" /><published>2017-05-31T00:00:00-05:00</published><updated>2017-05-31T00:00:00-05:00</updated><id>/notes/comparator-tricks</id><content type="html" xml:base="/notes/comparator-tricks.html">&lt;p&gt;Let’s create a set of strings. There is nothing new. Set of strings is used very widely in code. Nothing special.&lt;/p&gt;
+&lt;p&gt;This post is my attempt to learn jekyll and github pages. The oroginal of my post was published &lt;a href=&quot;https://rgaleyev.blogspot.com/2017/06/mergesort-with-fork-join-poll.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><summary type="html">The simplest task which shows how the fork-join framework works is Mergesort. Mergesort is a simple and well-known algorithm for arrays sorting. The main idea is split array for small chunks, sort them and then merge already sorted chunks in the one array. Fork join pool allows split each task to subtasks and execute it in parallel and then use the result.</summary></entry><entry><title type="html">Comparator tricks</title><link href="/notes/comparator-tricks.html" rel="alternate" type="text/html" title="Comparator tricks" /><published>2017-05-31T00:00:00-05:00</published><updated>2017-05-31T00:00:00-05:00</updated><id>/notes/comparator-tricks</id><content type="html" xml:base="/notes/comparator-tricks.html">&lt;p&gt;Let’s create a set of strings. There is nothing new. Set of strings is used very widely in code. Nothing special.&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;    &lt;span class=&quot;nc&quot;&gt;Set&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TreeSet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;();&lt;/span&gt; &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
@@ -929,4 +944,4 @@ if the set and the collection have different comparators. As we can see. The set
 
 &lt;p&gt;As this part of the code is used from all ancestors of the Abstract set. This behavior theoretically can appear everywhere. Be careful.&lt;/p&gt;
 
-&lt;p&gt;This post is my attempt to learn jekyll and github pages. The oroginal of my post was published &lt;a href=&quot;https://rgaleyev.blogspot.com/2017/05/lets-create-set-of-strings.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>dehasi</name><email>ravil@mailforspam.com</email></author><summary type="html">Let’s create a set of strings. There is nothing new. Set of strings is used very widely in code. Nothing special.</summary></entry></feed>
+&lt;p&gt;This post is my attempt to learn jekyll and github pages. The oroginal of my post was published &lt;a href=&quot;https://rgaleyev.blogspot.com/2017/05/lets-create-set-of-strings.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><summary type="html">Let’s create a set of strings. There is nothing new. Set of strings is used very widely in code. Nothing special.</summary></entry></feed>
