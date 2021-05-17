@@ -74,16 +74,21 @@ src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>The simplest task which shows how the fork-join framework works is Mergesort. Mergesort is a simple and well-known algorithm for arrays sorting. 
-The main idea is split array for small chunks, sort them and then merge already sorted chunks in the one array.<br />
+    <div class="paragraph">
+<p>The simplest task which shows how the fork-join framework works is Mergesort. Mergesort is a simple and well-known algorithm for arrays sorting.
+The main idea is split array for small chunks, sort them and then merge already sorted chunks in the one array.
 Fork join pool allows split each task to subtasks and execute it in parallel and then use the result.</p>
-
-<p>In applying merge sort to the fork-join pool we have to decide which part is a fork part and which part is a joining part. 
+</div>
+<div class="paragraph">
+<p>In applying merge sort to the fork-join pool we have to decide which part is a fork part and which part is a joining part.
 It is very obvious that the merge part in the merge sort is a joining part. And splitting array to chunks is a fork part.</p>
-
-<p>Let’s write some code. Let’s write the merge function first:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="nf">merge</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="n">a</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s write some code. Let&#8217;s write the merge function first:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="nf">merge</span><span class="o">(</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="n">a</span><span class="o">,</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="n">b</span><span class="o">)</span> <span class="o">{</span>
     <span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="o">,</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="o">;</span>
     <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="n">result</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">ArrayList</span><span class="o">&lt;&gt;(</span><span class="n">a</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">+</span> <span class="n">b</span><span class="o">.</span><span class="na">size</span><span class="o">());</span>
     <span class="k">while</span><span class="o">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">a</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">&amp;&amp;</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="n">b</span><span class="o">.</span><span class="na">size</span><span class="o">())</span>
@@ -113,18 +118,23 @@ It is very obvious that the merge part in the merge sort is a joining part. And 
         <span class="n">answer</span><span class="o">[</span><span class="n">k</span><span class="o">++]</span> <span class="o">=</span> <span class="n">b</span><span class="o">[</span><span class="n">j</span><span class="o">++];</span>
 
     <span class="k">return</span> <span class="n">answer</span><span class="o">;</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>Now, when we able to merge a result let’s write a task for the fork-join pool. 
-There are few types of task for the fork-join pool. All of then are inherited from ForkJoinTask. 
-RecursiveTask is very suitable for our problem, so I take it. I have to override only one method - 
-“compute” where I have to decide how I’m going to split tasks and how I’m going to handle the result.</p>
-
-<p>First of all, I want to sort an array manually if it small. That’s why I set up a threshold. 
-If the input array is equal or less than the threshold I sort it by Stream API. Otherwise, I’ll split it to two arrays, 
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, when we able to merge a result let&#8217;s write a task for the fork-join pool.
+There are few types of task for the fork-join pool. All of then are inherited from ForkJoinTask.
+RecursiveTask is very suitable for our problem, so I take it. I have to override only one method -
+"compute" where I have to decide how I&#8217;m going to split tasks and how I&#8217;m going to handle the result.</p>
+</div>
+<div class="paragraph">
+<p>First of all, I want to sort an array manually if it small. That&#8217;s why I set up a threshold.
+If the input array is equal or less than the threshold I sort it by Stream API. Otherwise, I&#8217;ll split it to two arrays,
 execute the same task recursively and then just merge the result.</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">MergeTask</span> <span class="kd">extends</span> <span class="nc">RecursiveTask</span><span class="o">&lt;</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;&gt;</span> <span class="o">{</span>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kd">class</span> <span class="nc">MergeTask</span> <span class="kd">extends</span> <span class="nc">RecursiveTask</span><span class="o">&lt;</span><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;&gt;</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">int</span> <span class="no">THRESHOLD</span> <span class="o">=</span> <span class="mi">4</span><span class="o">;</span>
     <span class="kd">private</span> <span class="kd">final</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="n">list</span><span class="o">;</span>
 
@@ -132,7 +142,7 @@ execute the same task recursively and then just merge the result.</p>
         <span class="k">this</span><span class="o">.</span><span class="na">list</span> <span class="o">=</span> <span class="n">list</span><span class="o">;</span>
     <span class="o">}</span>
 
-    <span class="nd">@Override</span>    
+    <span class="nd">@Override</span>
     <span class="kd">protected</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="nf">compute</span><span class="o">()</span> <span class="o">{</span>
         <span class="k">if</span> <span class="o">(</span><span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">&lt;</span> <span class="no">THRESHOLD</span><span class="o">)</span> <span class="o">{</span>
             <span class="k">return</span> <span class="n">list</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">sorted</span><span class="o">().</span><span class="na">collect</span><span class="o">(</span><span class="n">toList</span><span class="o">());</span>
@@ -144,12 +154,16 @@ execute the same task recursively and then just merge the result.</p>
 
         <span class="k">return</span> <span class="nf">merge</span><span class="o">(</span><span class="n">left</span><span class="o">.</span><span class="na">join</span><span class="o">(),</span> <span class="n">right</span><span class="o">.</span><span class="na">join</span><span class="o">());</span>
     <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>The most part of work is already done. Let’s just write some test and run it. 
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The most part of work is already done. Let&#8217;s just write some test and run it.
 I also wrote a function which generates an array and the function which tests is an array sorted.</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FJMergeSort</span> <span class="o">{</span>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="kd">public</span> <span class="kd">class</span> <span class="nc">FJMergeSort</span> <span class="o">{</span>
 
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
         <span class="nc">Long</span><span class="o">[]</span> <span class="n">ar</span> <span class="o">=</span> <span class="n">privideArray</span><span class="o">(</span><span class="mi">100</span><span class="o">);</span>
@@ -175,7 +189,7 @@ I also wrote a function which generates an array and the function which tests is
             <span class="k">this</span><span class="o">.</span><span class="na">list</span> <span class="o">=</span> <span class="n">list</span><span class="o">;</span>
         <span class="o">}</span>
 
-        <span class="nd">@Override</span>        
+        <span class="nd">@Override</span>
         <span class="kd">protected</span> <span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="nf">compute</span><span class="o">()</span> <span class="o">{</span>
             <span class="k">if</span> <span class="o">(</span><span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">&lt;</span> <span class="no">THRESHOLD</span><span class="o">)</span> <span class="o">{</span>
                 <span class="k">return</span> <span class="n">list</span><span class="o">.</span><span class="na">stream</span><span class="o">().</span><span class="na">sorted</span><span class="o">().</span><span class="na">collect</span><span class="o">(</span><span class="n">toList</span><span class="o">());</span>
@@ -237,15 +251,20 @@ I also wrote a function which generates an array and the function which tests is
         <span class="o">}</span>
         <span class="k">return</span> <span class="kc">true</span><span class="o">;</span>
     <span class="o">}</span>
-<span class="o">}</span></code></pre></figure>
-
+<span class="o">}</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>Merge sort is a good example how the fork-join pool works. But in real life, the best (and shortest) way to sort an array is using Stream API:</p>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">asList</span><span class="o">(</span><span class="mi">4L</span><span class="o">,</span> <span class="mi">3L</span><span class="o">,</span> <span class="mi">1L</span><span class="o">).</span><span class="na">stream</span><span class="o">().</span><span class="na">parallel</span><span class="o">().</span><span class="na">sorted</span><span class="o">().</span><span class="na">collect</span><span class="o">(</span><span class="n">toList</span><span class="o">());</span></code></pre></figure>
-
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="java"><span class="nc">List</span><span class="o">&lt;</span><span class="nc">Long</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="n">asList</span><span class="o">(</span><span class="mi">4L</span><span class="o">,</span> <span class="mi">3L</span><span class="o">,</span> <span class="mi">1L</span><span class="o">).</span><span class="na">stream</span><span class="o">().</span><span class="na">parallel</span><span class="o">().</span><span class="na">sorted</span><span class="o">().</span><span class="na">collect</span><span class="o">(</span><span class="n">toList</span><span class="o">());</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
 <p>This post is my attempt to learn jekyll and github pages. The oroginal of my post was published <a href="https://rgaleyev.blogspot.com/2017/06/mergesort-with-fork-join-poll.html">here</a>.</p>
-
-
+</div>
   </div><a class="u-url" href="/notes/merge-sort-with-fork-join.html" hidden></a>
 </article>
 
