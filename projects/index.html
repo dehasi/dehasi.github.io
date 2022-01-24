@@ -69,51 +69,52 @@ src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS_CHTML">
   </header>
 
   <div class="post-content">
-    <h3 id="apache-ignite-ml">Apache Ignite ML</h3>
-
-<p>Machine Leaning module in <a href="https://ignite.apache.org/">Apache Ignite</a>.</p>
-
-<p>I implemented few Bayesian algorithms.</p>
-
-<p>My humble <a href="https://github.com/apache/ignite/commits?author=dehasi">commits</a></p>
-
-<h3 id="zeliba">ZeLiba</h3>
-
+    <div class="home"><ul class="post-list"><li><!--
+        <span class="post-meta">Jan 4, 2022</span>
+        -->
+        <h3>
+          <a class="post-link" href="/projects/good-fist-issue.html">
+            Good Fist Issue
+          </a>
+        </h3>
+       <div class="paragraph">
+<p>Chrome plugin to see labels of issues.</p>
+</div>
+      </li><li><!--
+        <span class="post-meta">Jan 3, 2022</span>
+        -->
+        <h3>
+          <a class="post-link" href="/projects/practical-minimum.html">
+            Practical Minimum
+          </a>
+        </h3>
+       <div class="paragraph">
+<p>Semester course in Saint-Petersburg <a href="https://compscicenter.ru/">Computer Science Center</a>.</p>
+</div>
+      </li><li><!--
+        <span class="post-meta">Jan 2, 2022</span>
+        -->
+        <h3>
+          <a class="post-link" href="/projects/zeliba.html">
+            ZeLiba
+          </a>
+        </h3>
+       <div class="paragraph">
 <p><a href="https://github.com/dehasi/zeliba">ZeLiba</a> is a DSL-ish library to make comparisons more readable.
-Also, provides pattern-matching for Java 8</p>
-
-<h4 id="examples">Examples</h4>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="nc">Comparable</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">val1</span> <span class="o">=</span> <span class="o">...</span>
-<span class="nc">Comparable</span><span class="o">&lt;</span><span class="no">T</span><span class="o">&gt;</span> <span class="n">val2</span> <span class="o">=</span> <span class="o">...</span>
-
-<span class="k">if</span> <span class="o">(</span><span class="n">the</span><span class="o">(</span><span class="n">val1</span><span class="o">).</span><span class="na">isGreaterThan</span><span class="o">(</span><span class="n">val2</span><span class="o">))</span> <span class="o">{</span>
-    <span class="o">...</span>
-<span class="o">}</span>
-
-<span class="k">if</span> <span class="o">(</span><span class="n">the</span><span class="o">(</span><span class="n">val2</span><span class="o">).</span><span class="na">isLessThan</span><span class="o">(</span><span class="n">val1</span><span class="o">))</span> <span class="o">{</span>
-    <span class="o">...</span>
-<span class="o">}</span></code></pre></figure>
-
-<figure class="highlight"><pre><code class="language-java" data-lang="java"><span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="nc">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
-    <span class="nc">String</span> <span class="n">language</span> <span class="o">=</span> <span class="o">(</span><span class="n">args</span><span class="o">.</span><span class="na">length</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">?</span> <span class="s">"EN"</span> <span class="o">:</span> <span class="n">args</span><span class="o">[</span><span class="mi">0</span><span class="o">];</span>
-
-    <span class="nc">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">when</span><span class="o">(</span><span class="n">language</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="s">"EN"</span><span class="o">).</span><span class="na">then</span><span class="o">(</span><span class="s">"Hello!"</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="s">"FE"</span><span class="o">).</span><span class="na">then</span><span class="o">(</span><span class="s">"Salut!"</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">is</span><span class="o">(</span><span class="s">"ES"</span><span class="o">).</span><span class="na">then</span><span class="o">(</span><span class="s">"Hola!"</span><span class="o">)</span>
-        <span class="o">.</span><span class="na">orElse</span><span class="o">(</span><span class="n">format</span><span class="o">(</span><span class="s">"Sorry, I can't greet you in %s yet"</span><span class="o">,</span> <span class="n">language</span><span class="o">))</span>
-    <span class="o">);</span>
-<span class="o">}</span></code></pre></figure>
-
-<p>see more <a href="https://github.com/dehasi/zeliba#Examples">Examples</a></p>
-
-<h3 id="практический-минимум-practical-minimum">Практический минимум (Practical minimum)</h3>
-
-<p>A semester course in Saint-Petersburg <a href="https://compscicenter.ru/">Computer Science Center</a>.</p>
-
-<p>The <a href="https://compscicenter.ru/courses/practical-minimum/">course page</a>.</p>
-
+Also, provides pattern-matching for Java 8.</p>
+</div>
+      </li><li><!--
+        <span class="post-meta">Jan 1, 2022</span>
+        -->
+        <h3>
+          <a class="post-link" href="/projects/apache-ignite.html">
+            Apache Ignite Machine Learning Module
+          </a>
+        </h3>
+       <div class="paragraph">
+<p>Machine Leaning module in <a href="https://ignite.apache.org/">Apache Ignite</a>.</p>
+</div>
+      </li></ul></div>
 
   </div>
 
@@ -136,7 +137,7 @@ Also, provides pattern-matching for Java 8</p>
         </p>
         <ul class="contact-list">
           <li class="p-name">dehasi</li>
-          <li><a class="u-email" href="mailto:neboskrebb@gmail.com">neboskrebb@gmail.com</a></li>
+          <li><a class="u-email" href="mailto:dehasi@protonmail.com">dehasi@protonmail.com</a></li>
         </ul>
       </div>
       <div class="footer-col">

@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://dehasi.me/feed.xml" rel="self" type="application/atom+xml" /><link href="http://dehasi.me/" rel="alternate" type="text/html" /><updated>2021-10-30T09:49:44-05:00</updated><id>http://dehasi.me/feed.xml</id><title type="html">Ravil Galeyev</title><subtitle>There is no unique content.</subtitle><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><entry><title type="html">Adding data to MySQL container</title><link href="http://dehasi.me/notes/dockerize-mysql.html" rel="alternate" type="text/html" title="Adding data to MySQL container" /><published>2021-10-01T00:00:00-05:00</published><updated>2021-10-01T00:00:00-05:00</updated><id>http://dehasi.me/notes/dockerize-mysql</id><content type="html" xml:base="http://dehasi.me/notes/dockerize-mysql.html">&lt;div class=&quot;sect1&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://dehasi.me/feed.xml" rel="self" type="application/atom+xml" /><link href="http://dehasi.me/" rel="alternate" type="text/html" /><updated>2022-01-24T13:14:10-06:00</updated><id>http://dehasi.me/feed.xml</id><title type="html">Ravil Galeyev</title><subtitle>There is no unique content.</subtitle><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><entry><title type="html">Good Fist Issue</title><link href="http://dehasi.me/projects/good-fist-issue.html" rel="alternate" type="text/html" title="Good Fist Issue" /><published>2022-01-04T00:00:00-06:00</published><updated>2022-01-04T00:00:00-06:00</updated><id>http://dehasi.me/projects/good-fist-issue</id><content type="html" xml:base="http://dehasi.me/projects/good-fist-issue.html">&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Chrome plugin to see labels of issues.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;span class=&quot;image&quot;&gt;&lt;img src=&quot;/projects/good-first-issue/screenshot.png&quot; alt=&quot;screenshot&quot;&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Code is on &lt;a href=&quot;https://github.com/dehasi/good-first-issue&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="projects" /><summary type="html">Chrome plugin to see labels of issues.</summary></entry><entry><title type="html">Practical Minimum</title><link href="http://dehasi.me/projects/practical-minimum.html" rel="alternate" type="text/html" title="Practical Minimum" /><published>2022-01-03T00:00:00-06:00</published><updated>2022-01-03T00:00:00-06:00</updated><id>http://dehasi.me/projects/practical-minimum</id><content type="html" xml:base="http://dehasi.me/projects/practical-minimum.html">&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Semester course in Saint-Petersburg &lt;a href=&quot;https://compscicenter.ru/&quot;&gt;Computer Science Center&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;The &lt;a href=&quot;https://compscicenter.ru/courses/practical-minimum/&quot;&gt;course page&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="projects" /><summary type="html">Semester course in Saint-Petersburg Computer Science Center.</summary></entry><entry><title type="html">ZeLiba</title><link href="http://dehasi.me/projects/zeliba.html" rel="alternate" type="text/html" title="ZeLiba" /><published>2022-01-02T00:00:00-06:00</published><updated>2022-01-02T00:00:00-06:00</updated><id>http://dehasi.me/projects/zeliba</id><content type="html" xml:base="http://dehasi.me/projects/zeliba.html">&lt;div id=&quot;preamble&quot;&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/dehasi/zeliba&quot;&gt;ZeLiba&lt;/a&gt; is a DSL-ish library to make comparisons more readable.
+Also, provides pattern-matching for Java 8.&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;sect1&quot;&gt;
+&lt;h2 id=&quot;examples&quot;&gt;Examples&lt;/h2&gt;
+&lt;div class=&quot;sectionbody&quot;&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;rouge highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nc&quot;&gt;Comparable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;Comparable&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;T&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;val2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isGreaterThan&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{...}&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;the&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isLessThan&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;val1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{...}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;listingblock&quot;&gt;
+&lt;div class=&quot;content&quot;&gt;
+&lt;pre class=&quot;rouge highlight&quot;&gt;&lt;code data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;language&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;EN&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;];&lt;/span&gt;
+
+    &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;when&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;EN&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;FE&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Salut!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;is&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ES&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;then&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hola!&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;orElse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Sorry, I can't greet you in %s yet&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;language&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;see more &lt;a href=&quot;https://github.com/dehasi/zeliba#Examples&quot;&gt;Examples&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="projects" /><summary type="html">ZeLiba is a DSL-ish library to make comparisons more readable. Also, provides pattern-matching for Java 8.</summary></entry><entry><title type="html">Apache Ignite Machine Learning Module</title><link href="http://dehasi.me/projects/apache-ignite.html" rel="alternate" type="text/html" title="Apache Ignite Machine Learning Module" /><published>2022-01-01T00:00:00-06:00</published><updated>2022-01-01T00:00:00-06:00</updated><id>http://dehasi.me/projects/apache-ignite</id><content type="html" xml:base="http://dehasi.me/projects/apache-ignite.html">&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;Machine Leaning module in &lt;a href=&quot;https://ignite.apache.org/&quot;&gt;Apache Ignite&lt;/a&gt;.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;I implemented few Bayesian algorithms.&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;paragraph&quot;&gt;
+&lt;p&gt;My humble &lt;a href=&quot;https://github.com/apache/ignite/commits?author=dehasi&quot;&gt;commits&lt;/a&gt;&lt;/p&gt;
+&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="projects" /><summary type="html">Machine Leaning module in Apache Ignite.</summary></entry><entry><title type="html">Adding data to MySQL container</title><link href="http://dehasi.me/notes/dockerize-mysql.html" rel="alternate" type="text/html" title="Adding data to MySQL container" /><published>2021-10-01T00:00:00-05:00</published><updated>2021-10-01T00:00:00-05:00</updated><id>http://dehasi.me/notes/dockerize-mysql</id><content type="html" xml:base="http://dehasi.me/notes/dockerize-mysql.html">&lt;div class=&quot;sect1&quot;&gt;
 &lt;h2 id=&quot;mount-scripts&quot;&gt;Mount scripts&lt;/h2&gt;
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -231,7 +291,7 @@ mysql&amp;gt; select * from my_table;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><category term="notes" /><summary type="html">Mount scripts</summary></entry><entry><title type="html">NginX</title><link href="http://dehasi.me/notes/nginx.html" rel="alternate" type="text/html" title="NginX" /><published>2021-06-11T00:00:00-05:00</published><updated>2021-06-11T00:00:00-05:00</updated><id>http://dehasi.me/notes/nginx</id><content type="html" xml:base="http://dehasi.me/notes/nginx.html">&lt;div class=&quot;sect1&quot;&gt;
+&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">Mount scripts</summary></entry><entry><title type="html">NginX</title><link href="http://dehasi.me/notes/nginx.html" rel="alternate" type="text/html" title="NginX" /><published>2021-06-11T00:00:00-05:00</published><updated>2021-06-11T00:00:00-05:00</updated><id>http://dehasi.me/notes/nginx</id><content type="html" xml:base="http://dehasi.me/notes/nginx.html">&lt;div class=&quot;sect1&quot;&gt;
 &lt;h2 id=&quot;run-static-site&quot;&gt;Run static site&lt;/h2&gt;
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
@@ -268,9 +328,9 @@ mysql&amp;gt; select * from my_table;
 &lt;p&gt;The config is in &lt;code&gt;/etc/nginx/nginx.conf&lt;/code&gt; and &lt;code&gt;/etc/nginx/conf.d/default.conf&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><category term="notes" /><summary type="html">Run static site</summary></entry><entry><title type="html">The first hidden post</title><link href="http://dehasi.me/hidden/hidded-post.html" rel="alternate" type="text/html" title="The first hidden post" /><published>2021-05-02T00:00:00-05:00</published><updated>2021-05-02T00:00:00-05:00</updated><id>http://dehasi.me/hidden/hidded-post</id><content type="html" xml:base="http://dehasi.me/hidden/hidded-post.html">&lt;div class=&quot;paragraph&quot;&gt;
+&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">Run static site</summary></entry><entry><title type="html">The first hidden post</title><link href="http://dehasi.me/hidden/hidded-post.html" rel="alternate" type="text/html" title="The first hidden post" /><published>2021-05-02T00:00:00-05:00</published><updated>2021-05-02T00:00:00-05:00</updated><id>http://dehasi.me/hidden/hidded-post</id><content type="html" xml:base="http://dehasi.me/hidden/hidded-post.html">&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;This is just an example of a hidden post.&lt;/p&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><category term="hidden" /><summary type="html">This is just an example of a hidden post.</summary></entry><entry><title type="html">Dockerize wiremock</title><link href="http://dehasi.me/notes/dockerize-wiremock.html" rel="alternate" type="text/html" title="Dockerize wiremock" /><published>2021-04-17T00:00:00-05:00</published><updated>2021-04-17T00:00:00-05:00</updated><id>http://dehasi.me/notes/dockerize-wiremock</id><content type="html" xml:base="http://dehasi.me/notes/dockerize-wiremock.html">&lt;div id=&quot;preamble&quot;&gt;
+&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="hidden" /><summary type="html">This is just an example of a hidden post.</summary></entry><entry><title type="html">Dockerize wiremock</title><link href="http://dehasi.me/notes/dockerize-wiremock.html" rel="alternate" type="text/html" title="Dockerize wiremock" /><published>2021-04-17T00:00:00-05:00</published><updated>2021-04-17T00:00:00-05:00</updated><id>http://dehasi.me/notes/dockerize-wiremock</id><content type="html" xml:base="http://dehasi.me/notes/dockerize-wiremock.html">&lt;div id=&quot;preamble&quot;&gt;
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Please, visit &lt;a href=&quot;http://wiremock.org/docs/getting-started/&quot;&gt;wiremock&lt;/a&gt; website for the official documentation.&lt;/p&gt;
@@ -395,7 +455,7 @@ enable-browser-proxying:      &lt;span class=&quot;nb&quot;&gt;false
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><category term="notes" /><summary type="html">Please, visit wiremock website for the official documentation.</summary></entry><entry><title type="html">Add AsciiDoc to Jekyll</title><link href="http://dehasi.me/notes/add-asciidoc-to-jekyll.html" rel="alternate" type="text/html" title="Add AsciiDoc to Jekyll" /><published>2021-04-12T00:00:00-05:00</published><updated>2021-04-12T00:00:00-05:00</updated><id>http://dehasi.me/notes/add-asciidoc-to-jekyll</id><content type="html" xml:base="http://dehasi.me/notes/add-asciidoc-to-jekyll.html">&lt;div id=&quot;preamble&quot;&gt;
+&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">Please, visit wiremock website for the official documentation.</summary></entry><entry><title type="html">Add AsciiDoc to Jekyll</title><link href="http://dehasi.me/notes/add-asciidoc-to-jekyll.html" rel="alternate" type="text/html" title="Add AsciiDoc to Jekyll" /><published>2021-04-12T00:00:00-05:00</published><updated>2021-04-12T00:00:00-05:00</updated><id>http://dehasi.me/notes/add-asciidoc-to-jekyll</id><content type="html" xml:base="http://dehasi.me/notes/add-asciidoc-to-jekyll.html">&lt;div id=&quot;preamble&quot;&gt;
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;It&amp;#8217;s mostly copy-paste of &lt;a href=&quot;https://www.crystal-growth.net/jekyll/2020/10/16/jekyll-setup.html&quot;&gt;this&lt;/a&gt; source&lt;/p&gt;
@@ -558,7 +618,7 @@ c^2 = a^2 + b^2 + 5
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><category term="notes" /><summary type="html">It&amp;#8217;s mostly copy-paste of this source</summary></entry><entry><title type="html">Database</title><link href="http://dehasi.me/notes/database.html" rel="alternate" type="text/html" title="Database" /><published>2018-03-26T00:00:00-05:00</published><updated>2018-03-26T00:00:00-05:00</updated><id>http://dehasi.me/notes/database</id><content type="html" xml:base="http://dehasi.me/notes/database.html">&lt;h3 id=&quot;give-a-proper-name-to-tables&quot;&gt;Give a proper name to tables&lt;/h3&gt;
+&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">It&amp;#8217;s mostly copy-paste of this source</summary></entry><entry><title type="html">Database</title><link href="http://dehasi.me/notes/database.html" rel="alternate" type="text/html" title="Database" /><published>2018-03-26T00:00:00-05:00</published><updated>2018-03-26T00:00:00-05:00</updated><id>http://dehasi.me/notes/database</id><content type="html" xml:base="http://dehasi.me/notes/database.html">&lt;h3 id=&quot;give-a-proper-name-to-tables&quot;&gt;Give a proper name to tables&lt;/h3&gt;
 &lt;p&gt;Sometimes it’s worth to add special suffixes and prefixes like&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;T_NAME_V&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;T_NAME_E&lt;/code&gt;, etc..&lt;/p&gt;
@@ -632,417 +692,4 @@ c^2 = a^2 + b^2 + 5
 &lt;p&gt;Keep enum as constraints&lt;/p&gt;
 
 &lt;h3 id=&quot;use-incremental-db-changes&quot;&gt;Use incremental DB changes&lt;/h3&gt;
-&lt;p&gt;Consider using tools like LiquidBase or flyway.&lt;/p&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><category term="notes" /><summary type="html">Give a proper name to tables Sometimes it’s worth to add special suffixes and prefixes like</summary></entry><entry><title type="html">Unit testing</title><link href="http://dehasi.me/notes/unit-testing.html" rel="alternate" type="text/html" title="Unit testing" /><published>2018-03-25T00:00:00-05:00</published><updated>2018-03-25T00:00:00-05:00</updated><id>http://dehasi.me/notes/unit-testing</id><content type="html" xml:base="http://dehasi.me/notes/unit-testing.html">&lt;h3 id=&quot;split-test-into-logical-blocks&quot;&gt;Split test into logical blocks&lt;/h3&gt;
-&lt;p&gt;There are three parts of test Prepare Act and Check;&lt;/p&gt;
-
-&lt;p&gt;It’s ok to add comments:
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;//given //when //then // and&lt;/code&gt;
-but sometimes a blank line separator is enough.&lt;/p&gt;
-
-&lt;h3 id=&quot;one-test-checks-one-thing&quot;&gt;One test checks one thing&lt;/h3&gt;
-&lt;p&gt;When something fails it’s good to know what exactly. which part of logic. 
-But “one test - one assert” sounds fanatical.&lt;/p&gt;
-
-&lt;h3 id=&quot;give-informative-names&quot;&gt;Give informative names&lt;/h3&gt;
-&lt;p&gt;A test name has to contain information about the test. There are few popular approaches. But I suggest&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;methodName_condition_result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;methodName_result&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Don’t use ‘should’ word in test names. “shouldReturn…” can be simply replaced by “returns…”, “shouldThrow..” -&amp;gt; “throws…”.&lt;/p&gt;
-
-&lt;p&gt;The annotation &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@Before&lt;/code&gt; can be used few times that’s why it’s worth to give it some understandable name.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@Before&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//can be few methods&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;createMocks&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// don’t just setUp&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;think-if-you-need-to-test-a-private-method&quot;&gt;Think if you need to test a private method&lt;/h3&gt;
-&lt;p&gt;If you have a private method which needs to be tested, think twice. 
-Probably you have not good architecture. But if you want to test it anyway use&lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;@VisibleForTesting&lt;/code&gt; annotation which says that this method should be private but it has the package-private access only for testing purpose.&lt;/p&gt;
-
-&lt;h3 id=&quot;mvc-tests&quot;&gt;MVC tests&lt;/h3&gt;
-&lt;p&gt;Use mockmvc to test a controller layer. 
-Consider also Spring Cloud Contract and Spring Rest Docs to keep API contract and Documentation up to date.&lt;/p&gt;
-
-&lt;p&gt;Use mocks&lt;/p&gt;
-
-&lt;h3 id=&quot;use-real-ish-data&quot;&gt;Use real(-ish) data&lt;/h3&gt;
-&lt;p&gt;It’s good to reflect business logic to test data. Probably somebody else will maintain your tests. 
-A good data gives move context.&lt;/p&gt;
-
-&lt;p&gt;i.e.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;CARD_NUMBER&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;a_card_number&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// wrong&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;CARD_NUMBER&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;SN123456&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//good&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;coverage&quot;&gt;Coverage&lt;/h3&gt;
-&lt;p&gt;Don’t write artificial tests to shut up Sonar. 
-Test coverage should say which logic is not covered yet and should be covered. There should be any quality targets (some % of coverage).&lt;/p&gt;
-
-&lt;h3 id=&quot;links&quot;&gt;Links&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://dzone.com/articles/7-popular-unit-test-naming&quot;&gt;7 Popular Unit Test Naming Conventions&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://testing.googleblog.com&quot;&gt;Google Testing Blog&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://docs.spring.io/spring-security/site/docs/current/reference/html/test-mockmvc.html&quot;&gt;Spring MVC Test Integration&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://martinfowler.com/bliki/TestCoverage.html&quot;&gt;Martin Fowler: test coverage&lt;/a&gt;&lt;/p&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><category term="notes" /><summary type="html">Split test into logical blocks There are three parts of test Prepare Act and Check;</summary></entry><entry><title type="html">Versioning</title><link href="http://dehasi.me/notes/git-conventions.html" rel="alternate" type="text/html" title="Versioning" /><published>2018-03-09T00:00:00-06:00</published><updated>2018-03-09T00:00:00-06:00</updated><id>http://dehasi.me/notes/git-conventions</id><content type="html" xml:base="http://dehasi.me/notes/git-conventions.html">&lt;h3 id=&quot;versioning&quot;&gt;Versioning&lt;/h3&gt;
-&lt;p&gt;1 Every change should have a (jira) ticket.&lt;/p&gt;
-
-&lt;p&gt;2 It’s worth to use &lt;a href=&quot;https://semver.org/&quot;&gt;Semantic Versioning&lt;/a&gt;
-Versions should look like a&lt;/p&gt;
-
-&lt;p&gt;MAJOR.MINOR.PATCH&lt;/p&gt;
-
-&lt;p&gt;3 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;develop&lt;/code&gt; branch is one step ahead from the master and has a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SNAPSHOT&lt;/code&gt; prefix&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;master&lt;/td&gt;
-      &lt;td&gt;1.2.34&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;develop&lt;/td&gt;
-      &lt;td&gt;1.2.35-SHAPSHOT&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;p&gt;4 It’s worth to bind versions to some understandable things.
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;major_release.spring_number.in_spring_release&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;It’s also compatible with Semantic Versioning when we start from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.1.0&lt;/code&gt; (Sprint 1) and increase major version with some significant changes (i.e. going to production, starting the new phase, etc..).&lt;/p&gt;
-
-&lt;p&gt;5 You change it – you own it&lt;/p&gt;
-
-&lt;p&gt;When you start to make changes, you are responsible for the whole class/file/module. 
-It means you can (and have to) make some refactoring there. Also, reviewers will comment not only your changes.&lt;/p&gt;
-
-&lt;h3 id=&quot;branches&quot;&gt;Branches&lt;/h3&gt;
-&lt;p&gt;There are three types of branches:&lt;/p&gt;
-
-&lt;p&gt;bugFix/&lt;/p&gt;
-
-&lt;p&gt;feature/&lt;/p&gt;
-
-&lt;p&gt;refactoring/&lt;/p&gt;
-
-&lt;p&gt;A branch name should contain a ticket number.
-i.e. &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;feature/jira-43-add-super-feature&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Sometimes it might be worth to add also a sprint number.
- &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;feature/i34-jira-43-add-super-feature&lt;/code&gt;
-But the period of branch life should be short (from a couple of hours to a couple of days).
-That’s why it’s not always necessary.&lt;/p&gt;
-
-&lt;p&gt;Each developer’s branch is merged to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;develop&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;commits&quot;&gt;Commits&lt;/h3&gt;
-&lt;p&gt;Each commit message has to start with a (jira) ticket number.&lt;/p&gt;
-
-&lt;p&gt;I.e.
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;[JIRA-01] Fix something&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;There is a regexp which can help
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(Merge.*|\[JIRA-\d+\] [A-Z].{,49}[^.]$)&lt;/code&gt;
-you can make your own prefix and debug it &lt;a href=&quot;https://www.debuggex.com/&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Commit message shall follow the following rules:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;&lt;a href=&quot;https://chris.beams.io/posts/git-commit/#separate&quot;&gt;Separate subject from the body with a blank line&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://chris.beams.io/posts/git-commit/#limit-50&quot;&gt;Limit the subject line to 50 characters&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://chris.beams.io/posts/git-commit/#capitalize&quot;&gt;Capitalize the subject line&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://chris.beams.io/posts/git-commit/#end&quot;&gt;Do not end the subject line with a period&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://chris.beams.io/posts/git-commit/#imperative&quot;&gt;Use the imperative mood in the subject line&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://chris.beams.io/posts/git-commit/#wrap-72&quot;&gt;Wrap the body at 72 characters&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://chris.beams.io/posts/git-commit/#why-not-how&quot;&gt;Use the body to explain what and why vs. how&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h3 id=&quot;two-approves&quot;&gt;Two approves&lt;/h3&gt;
-&lt;p&gt;It’s good to have two reviews if they are:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Peer Review,&lt;/strong&gt; when your colleague looks at your Merge Request and confirms that your code makes exactly that task requires and clicks Approve.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;Readability Review,&lt;/strong&gt; when an experienced developer (not necessary from your team) looks at the code and check the approach. How good this solution from the technical perspective.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Otherwise, it’s good if more people look at your code. But if they at the same level, or just not experienced, two approvers approach will look like a ritual.&lt;/p&gt;
-
-&lt;h3 id=&quot;merge-requests&quot;&gt;Merge requests&lt;/h3&gt;
-&lt;p&gt;Add a task number to the merge request title
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JIRA-43 Implement useful feature&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Add description and labels if needed&lt;/p&gt;
-
-&lt;h3 id=&quot;merge-request-discussion&quot;&gt;Merge request discussion&lt;/h3&gt;
-&lt;p&gt;Try to explain your position in comments. I.e. give a link to conventions.&lt;/p&gt;
-
-&lt;p&gt;Don’t answer “done”. Explain what you changed.&lt;/p&gt;
-
-&lt;p&gt;Some common shortcuts:&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;ditto:&lt;/em&gt; the same thing again, when you already explained your point above.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;nit:&lt;/em&gt; a small change that may not be very important, 
-but is technically correct. In example &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nit: remove whitespace.&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;LGTM:&lt;/em&gt; Looks Good To Me&lt;/p&gt;
-
-&lt;h3 id=&quot;releasing&quot;&gt;Releasing&lt;/h3&gt;
-&lt;p&gt;Is merging the develop to the master (and should be automated).&lt;/p&gt;
-
-&lt;p&gt;Before merging:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;run all tests which you have (unit, integration, smoke …)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;After merge:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;increase version of the develop&lt;/li&gt;
-  &lt;li&gt;updating release notes.&lt;/li&gt;
-  &lt;li&gt;create a tag with the actual version number on the master&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;links&quot;&gt;Links&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://semver.org/&quot;&gt;Semantic Versioning&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://chris.beams.io/posts/git-commit/&quot;&gt;How to Write a Git Commit Message&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://nvie.com/posts/a-successful-git-branching-model/&quot;&gt;A successful Git branching model&lt;/a&gt;&lt;/p&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><category term="notes" /><summary type="html">Versioning 1 Every change should have a (jira) ticket.</summary></entry><entry><title type="html">Mock with Spring Cloud Contract</title><link href="http://dehasi.me/notes/mock-with-spring-cloud-contract.html" rel="alternate" type="text/html" title="Mock with Spring Cloud Contract" /><published>2018-02-28T00:00:00-06:00</published><updated>2018-02-28T00:00:00-06:00</updated><id>http://dehasi.me/notes/mock-with-spring-cloud-contract</id><content type="html" xml:base="http://dehasi.me/notes/mock-with-spring-cloud-contract.html">&lt;p&gt;There are a couple of examples, where an API contract exists.
-I.e when there are a backend and a frontend parts. They both can be developed separately. 
-Sometimes people create mock servers to stub responses from a backend. But there is a risk, 
-that contract can be changed, but the mock server can’t. In this case, this inconsistency will be caught only in integration part.&lt;/p&gt;
-
-&lt;p&gt;Another example, when there are few microservices which talk with each other. 
-In this case, the inconsistency can be found only after deploying and end-to-end tests.&lt;/p&gt;
-
-&lt;p&gt;It would be nice to have a way to mock a third party API and always keep it consistent.&lt;/p&gt;
-
-&lt;p&gt;Well, there is no problem with running mocks. We can just use Wiremock library to run them.
-Wiremock is a library which emulates HTTP based server. We need to give them request and response examples, described in JSON format.&lt;/p&gt;
-
-&lt;p&gt;The last thing is where we can this JSONs? Obviously, we can write them manually, 
-but Spring Cloud Contract can generate them for us. We just need to prepare spring cloud contracts contracts.
-And then run 
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mvn spring-cloud-contract:convert&lt;/code&gt; 
-In my example WireMock stubs mappings directory in (you can see your from maven logs):&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A:\scc\target\stubs\META-INF\me.greet\greet\0.0.1-SNAPSHOT\mappings
-[INFO] Creating new stub [A:\scc\target\stubs\META-INF\me.greet\greet\0.0.1-SNAPSHOT\mappings\greet\afternoon_greet.json]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Also we can generate a jar with stubs by
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mvn spring-cloud-contract:generateStubs &lt;/code&gt;
-command. It put the result from the previous command to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;***-stubs.jar&lt;/code&gt; file.&lt;/p&gt;
-
-&lt;p&gt;Maven logs&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[INFO] --- spring-cloud-contract-maven-plugin:1.2.2.RELEASE:generateStubs (default-cli) @ greet ---
-[INFO] Files matching this pattern will be excluded from stubs generation [**/*.groovy]
-[INFO] Building jar: A:\scc\target\greet-0.0.1-SNAPSHOT-stubs.jar
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Now it even possible to deploy our stubs in our maven repo and share them with other people in team. 
-To unpack jar we can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jar xf jar-file&lt;/code&gt; command.&lt;/p&gt;
-
-&lt;p&gt;Now, when we have mocks, let’s try use them.
-The easiest way is run wiremock as a standalone process http://wiremock.org/docs/running-standalone/
-We need to download a jar file and put our folder which has name “mappings” and cootains mocks to the root  directory.
-Something as below&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A:\wmso&amp;gt;ls -R
-.:
-mappings  wiremock-standalone-2.14.0.jar
-./mappings:
-greet
-./mappings/greet:
-afternoon_greet.json
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;And then run standalone wiremock.
-Logs example:&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;A:\wmso&amp;gt;java -jar wiremock-standalone-2.14.0.jar
-SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
- /$$      /$$ /$$                     /$$      /$$                     /$$
-| $$  /$ | $$|__/                    | $$$    /$$$                    | $$
-| $$ /$$$| $$ /$$  /$$$$$$   /$$$$$$ | $$$$  /$$$$  /$$$$$$   /$$$$$$$| $$   /$$
-| $$/$$ $$ $$| $$ /$$__  $$ /$$__  $$| $$ $$/$$ $$ /$$__  $$ /$$_____/| $$  /$$/
-| $$$$_  $$$$| $$| $$  \__/| $$$$$$$$| $$  $$$| $$| $$  \ $$| $$      | $$$$$$/
-| $$$/ \  $$$| $$| $$      | $$_____/| $$\  $ | $$| $$  | $$| $$      | $$_  $$
-| $$/   \  $$| $$| $$      |  $$$$$$$| $$ \/  | $$|  $$$$$$/|  $$$$$$$| $$ \  $$
-|__/     \__/|__/|__/       \_______/|__/     |__/ \______/  \_______/|__/  \__/
-port:                         8080
-enable-browser-proxying:      false
-no-request-journal:           false
-verbose:                      false
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;As you can see from logs, wiremock server runs on port 8080 (it can be changed with option –port). When we go to the following address.
-http://localhost:8080/greet/john
-we will receive our expected response 
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{&quot;greet&quot;:&quot;Good afternoon John&quot;}&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;So now we can give the mocks to our frontend team and they can be sure, that they use the actual API.&lt;/p&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><category term="notes" /><summary type="html">There are a couple of examples, where an API contract exists. I.e when there are a backend and a frontend parts. They both can be developed separately. Sometimes people create mock servers to stub responses from a backend. But there is a risk, that contract can be changed, but the mock server can’t. In this case, this inconsistency will be caught only in integration part.</summary></entry><entry><title type="html">Test with Spring Cloud Contract</title><link href="http://dehasi.me/notes/test-with-spring-cloud-contract.html" rel="alternate" type="text/html" title="Test with Spring Cloud Contract" /><published>2017-12-23T00:00:00-06:00</published><updated>2017-12-23T00:00:00-06:00</updated><id>http://dehasi.me/notes/test-with-spring-cloud-contract</id><content type="html" xml:base="http://dehasi.me/notes/test-with-spring-cloud-contract.html">&lt;p&gt;Spring cloud contract is a powerful tool for testing and mocking. 
-In this post, I try to use Spring cloud contract to build a simple web application and show how Spring cloud contract can be helpful.&lt;/p&gt;
-
-&lt;p&gt;Fist. I went to http://start.spring.io/ and generated a skeleton of my project. I added only JAX-RS and Spring cloud contract dependencies.&lt;/p&gt;
-
-&lt;p&gt;Now I’m able to add a first controller. My app will say “hello”
-I.e. If I request &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/greet/john&lt;/code&gt; 
-I want to get a&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;greet&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Good afternoon John&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;as a response.&lt;/p&gt;
-
-&lt;p&gt;First I should create a Controller which will process my requests. And create a base class for my auto-generated tests.
-Then. I’ll be able to create my first contract. 
-So at the beginning my controller, will look like:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@RestController&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;GreetController&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;{}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;an empty class. I’m not going to write code. Let’s create an environment first.&lt;/p&gt;
-
-&lt;p&gt;Then I should create my base test class and add controller. I use http://rest-assured.io/ for testing.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MvcTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;nd&quot;&gt;@Before&lt;/span&gt;
-   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;nc&quot;&gt;RestAssuredMockMvc&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;standaloneSetup&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;GreetController&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Also, I should add a contract plugin to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pom.xml&lt;/code&gt;. And put my &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MvcTest&lt;/code&gt; class to 
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;baseClassForTests&lt;/code&gt; property.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-xml&quot; data-lang=&quot;xml&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;plugin&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;groupId&amp;gt;&lt;/span&gt;org.springframework.cloud&lt;span class=&quot;nt&quot;&gt;&amp;lt;/groupId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;artifactId&amp;gt;&lt;/span&gt;spring-cloud-contract-maven-plugin&lt;span class=&quot;nt&quot;&gt;&amp;lt;/artifactId&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;version&amp;gt;&lt;/span&gt;1.2.1.RELEASE&lt;span class=&quot;nt&quot;&gt;&amp;lt;/version&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;extensions&amp;gt;&lt;/span&gt;true&lt;span class=&quot;nt&quot;&gt;&amp;lt;/extensions&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;configuration&amp;gt;&lt;/span&gt;
-     &lt;span class=&quot;c&quot;&gt;&amp;lt;!-- Provide the base class for your auto-generated tests --&amp;gt;&lt;/span&gt;
-     &lt;span class=&quot;nt&quot;&gt;&amp;lt;baseClassForTests&amp;gt;&lt;/span&gt;me.greet.greet.MvcTest&lt;span class=&quot;nt&quot;&gt;&amp;lt;/baseClassForTests&amp;gt;&lt;/span&gt;
-  &lt;span class=&quot;nt&quot;&gt;&amp;lt;/configuration&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/plugin&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;And now I can create my first contract. It should be a groovy file in 
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\src\test\resources\contracts&lt;/code&gt; folder. I put mine in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\src\test\resources\contracts\greet\afternoon_greet.groovy&lt;/code&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-groovy&quot; data-lang=&quot;groovy&quot;&gt;&lt;span class=&quot;n&quot;&gt;org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;springframework&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;cloud&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;contract&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Contract&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;make&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;method&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'GET'&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;urlPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/greet/john'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-   &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;status&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;
-       &lt;span class=&quot;nf&quot;&gt;body&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;
-               &lt;span class=&quot;s1&quot;&gt;'''
-               {
-                 &quot;greet&quot;: &quot;Good afternoon John&quot;
-               }
-               '''&lt;/span&gt;
-       &lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-       &lt;span class=&quot;n&quot;&gt;headers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-           &lt;span class=&quot;n&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Content-Type'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'application/json;charset=UTF-8'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-       &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, if I &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run mvn clean verify&lt;/code&gt;, I’ll get&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Failed tests:
-  GreetTest.validate_afternoon_greet:26 expected:&amp;lt;[200]&amp;gt; but was:&amp;lt;[404]&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;Which is quite obvious. 
-Before fixing the test. Let’s look at other options, which SCC gives to us.&lt;/p&gt;
-
-&lt;h3 id=&quot;spring-cloud-contractgeneratetests&quot;&gt;spring-cloud-contract:generateTests&lt;/h3&gt;
-&lt;p&gt;Generates unit-tests from contracts, and put them into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\target\generated-test-sources\contracts&lt;/code&gt;
-The test, which was generated by my contact locates in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\target\generated-test-sources\contracts\me\greet\greet\GreetTest.java&lt;/code&gt;
-Let’s look at it&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;GreetTest&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;MvcTest&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-  &lt;span class=&quot;nd&quot;&gt;@Test&lt;/span&gt;
-  &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;validate_afternoon_greet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;throws&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Exception&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-     &lt;span class=&quot;c1&quot;&gt;// given:&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;MockMvcRequestSpecification&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;request&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;given&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
-
-     &lt;span class=&quot;c1&quot;&gt;// when:&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;ResponseOptions&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;response&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;given&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;request&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-              &lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/greet/john&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-
-     &lt;span class=&quot;c1&quot;&gt;// then:&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;statusCode&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;assertThat&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;header&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;application/json;charset=UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-     &lt;span class=&quot;c1&quot;&gt;// and:&lt;/span&gt;
-        &lt;span class=&quot;nc&quot;&gt;DocumentContext&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;parsedJson&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;JsonPath&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;getBody&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;().&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;asString&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;());&lt;/span&gt;
-        &lt;span class=&quot;n&quot;&gt;assertThatJson&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parsedJson&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;field&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;['greet']&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;isEqualTo&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Good afternoon John&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;mvn-spring-cloud-contractconvert&quot;&gt;mvn spring-cloud-contract:convert&lt;/h3&gt;
-&lt;p&gt;Converts contracts  into WireMock stub mappings.http://wiremock.org  The mappings are json files and they stay in 
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;target\stubs\META-INF\me.greet\greet\0.0.1-SNAPSHOT\mappings&lt;/code&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;target\stubs\META-INF\me.greet\greet\0.0.1-SNAPSHOT\mappings/greet/greet_afternoon.json&lt;/code&gt; looks like&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-json&quot; data-lang=&quot;json&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
- &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;id&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1ed076d5-513f-417f-9c34-f6be58c72bbb&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
- &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;request&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;urlPath&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;/greet/john&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;method&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;GET&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
- &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
- &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;response&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;status&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;200&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;body&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;{&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;greet&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;Good afternoon John&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;}&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;headers&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-     &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;Content-Type&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;application/json;charset=UTF-8&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-   &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;transformers&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;response-template&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
- &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
- &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;uuid&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;1ed076d5-513f-417f-9c34-f6be58c72bbb&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;mvn-spring-cloud-contractgeneratestubs&quot;&gt;mvn spring-cloud-contract:generateStubs&lt;/h3&gt;
-&lt;p&gt;Generate stubs from wiremock mappings. and out then to jar file
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\target\greet-0.0.1-SNAPSHOT-stubs.jar&lt;/code&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;mvn-spring-cloud-contractrun&quot;&gt;mvn spring-cloud-contract:run&lt;/h3&gt;
-&lt;p&gt;Runs wiremock.  You something like below in logs&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[INFO] All stubs are now running RunningStubs [namesAndPorts={\target\stubs:+:stubs=8080}]
-[INFO] Press ENTER to continue...
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;if we go to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080/greet/john&lt;/code&gt; we get our expected result. But i.e. if we request
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http://localhost:8080/greet/sam&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;A useful error response&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;http://dehasi.me/assets/2017-12-23-tdd-with-scc.png&quot; alt=&quot;My helpful screenshot&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;At the end, let’s write the simplest version of controller and check that tests work.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;nd&quot;&gt;@RestController&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;GreetController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-
-   &lt;span class=&quot;nd&quot;&gt;@GetMapping&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;greet/john&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
-   &lt;span class=&quot;nc&quot;&gt;Afternoon&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;greet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Afternoon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Good afternoon John&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
-   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Afternoon&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-   &lt;span class=&quot;kd&quot;&gt;private&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;greet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-
-   &lt;span class=&quot;nc&quot;&gt;Afternoon&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;greet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;greet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;greet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-
-   &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;getGreet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
-       &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;greet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
-   &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Now, if I &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;run mvn clean verify&lt;/code&gt;, I’ll get&lt;/p&gt;
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;[INFO] BUILD SUCCESS
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>dehasi</name><email>neboskrebb@gmail.com</email></author><category term="notes" /><summary type="html">Spring cloud contract is a powerful tool for testing and mocking. In this post, I try to use Spring cloud contract to build a simple web application and show how Spring cloud contract can be helpful.</summary></entry></feed>
+&lt;p&gt;Consider using tools like LiquidBase or flyway.&lt;/p&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">Give a proper name to tables Sometimes it’s worth to add special suffixes and prefixes like</summary></entry></feed>
