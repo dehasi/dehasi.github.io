@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://dehasi.me/feed.xml" rel="self" type="application/atom+xml" /><link href="http://dehasi.me/" rel="alternate" type="text/html" /><updated>2022-01-24T13:14:10-06:00</updated><id>http://dehasi.me/feed.xml</id><title type="html">Ravil Galeyev</title><subtitle>There is no unique content.</subtitle><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><entry><title type="html">Good Fist Issue</title><link href="http://dehasi.me/projects/good-fist-issue.html" rel="alternate" type="text/html" title="Good Fist Issue" /><published>2022-01-04T00:00:00-06:00</published><updated>2022-01-04T00:00:00-06:00</updated><id>http://dehasi.me/projects/good-fist-issue</id><content type="html" xml:base="http://dehasi.me/projects/good-fist-issue.html">&lt;div class=&quot;paragraph&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://dehasi.me/feed.xml" rel="self" type="application/atom+xml" /><link href="http://dehasi.me/" rel="alternate" type="text/html" /><updated>2023-02-27T14:59:34-06:00</updated><id>http://dehasi.me/feed.xml</id><title type="html">Ravil Galeyev</title><subtitle>There is no unique content.</subtitle><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><entry><title type="html">Good Fist Issue</title><link href="http://dehasi.me/projects/good-fist-issue.html" rel="alternate" type="text/html" title="Good Fist Issue" /><published>2022-01-04T00:00:00-06:00</published><updated>2022-01-04T00:00:00-06:00</updated><id>http://dehasi.me/projects/good-fist-issue</id><content type="html" xml:base="http://dehasi.me/projects/good-fist-issue.html">&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Chrome plugin to see labels of issues.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -618,78 +618,4 @@ c^2 = a^2 + b^2 + 5
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">It&amp;#8217;s mostly copy-paste of this source</summary></entry><entry><title type="html">Database</title><link href="http://dehasi.me/notes/database.html" rel="alternate" type="text/html" title="Database" /><published>2018-03-26T00:00:00-05:00</published><updated>2018-03-26T00:00:00-05:00</updated><id>http://dehasi.me/notes/database</id><content type="html" xml:base="http://dehasi.me/notes/database.html">&lt;h3 id=&quot;give-a-proper-name-to-tables&quot;&gt;Give a proper name to tables&lt;/h3&gt;
-&lt;p&gt;Sometimes it’s worth to add special suffixes and prefixes like&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;T_NAME_V&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;T_NAME_E&lt;/code&gt;, etc..&lt;/p&gt;
-
-&lt;p&gt;to distinguish service and business tables.&lt;/p&gt;
-
-&lt;h3 id=&quot;consider-having-common-columns&quot;&gt;Consider having common columns&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;name&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;type&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;explanation&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;id&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;int&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;an artificial integer id&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;version&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;int&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;increments after each change&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;[key/business key]&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;a set of columns&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;business key, this values are unique and not null&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;[other data]&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;a set of columns&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;any other data&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;created_at&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;timestamp&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;date and time when the row was created&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;modified_at&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;timestamp&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;date and time when the row was updated last time&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;comment&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;string&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;any comment, why this row is created or updated. (i.e. put jira ticket number)&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;constraints&quot;&gt;Constraints&lt;/h3&gt;
-&lt;p&gt;It’s kind a holy war, somebody thinks that everything should be in code.&lt;/p&gt;
-
-&lt;p&gt;Give names to all constraints, i.e.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CONSTRAINT pk_&amp;lt;column_name&amp;gt; PRIMARY KEY (column_name)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CONSTRAINT fk_&amp;lt;column_name&amp;gt;  FOREIGN KEY (column_name)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CONSTRAINT uq_&amp;lt;column_name&amp;gt; UNIQUE (column_name)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CONSTRAINT ck_&amp;lt;column_name&amp;gt; CHECK (column_name &amp;gt; 0)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;CONSTRAINT idx_&amp;lt;column_name&amp;gt; INDEX (column_name)&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Keep enum as constraints&lt;/p&gt;
-
-&lt;h3 id=&quot;use-incremental-db-changes&quot;&gt;Use incremental DB changes&lt;/h3&gt;
-&lt;p&gt;Consider using tools like LiquidBase or flyway.&lt;/p&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">Give a proper name to tables Sometimes it’s worth to add special suffixes and prefixes like</summary></entry></feed>
+&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">It&amp;#8217;s mostly copy-paste of this source</summary></entry></feed>
