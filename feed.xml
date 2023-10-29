@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="http://dehasi.me/feed.xml" rel="self" type="application/atom+xml" /><link href="http://dehasi.me/" rel="alternate" type="text/html" /><updated>2023-02-27T14:59:34-06:00</updated><id>http://dehasi.me/feed.xml</id><title type="html">Ravil Galeyev</title><subtitle>There is no unique content.</subtitle><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><entry><title type="html">Good Fist Issue</title><link href="http://dehasi.me/projects/good-fist-issue.html" rel="alternate" type="text/html" title="Good Fist Issue" /><published>2022-01-04T00:00:00-06:00</published><updated>2022-01-04T00:00:00-06:00</updated><id>http://dehasi.me/projects/good-fist-issue</id><content type="html" xml:base="http://dehasi.me/projects/good-fist-issue.html">&lt;div class=&quot;paragraph&quot;&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://dehasi.me/feed.xml" rel="self" type="application/atom+xml" /><link href="https://dehasi.me/" rel="alternate" type="text/html" /><updated>2023-10-29T08:30:06-05:00</updated><id>https://dehasi.me/feed.xml</id><title type="html">Ravil Galeyev</title><subtitle>There is no unique content.</subtitle><author><name>Ravil Galeyev</name><email>dehasi@protonmail.com</email></author><entry><title type="html">Good Fist Issue</title><link href="https://dehasi.me/projects/good-fist-issue.html" rel="alternate" type="text/html" title="Good Fist Issue" /><published>2022-01-04T00:00:00-06:00</published><updated>2022-01-04T00:00:00-06:00</updated><id>https://dehasi.me/projects/good-fist-issue</id><content type="html" xml:base="https://dehasi.me/projects/good-fist-issue.html">&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Chrome plugin to see labels of issues.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -6,12 +6,12 @@
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Code is on &lt;a href=&quot;https://github.com/dehasi/good-first-issue&quot;&gt;github&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="projects" /><summary type="html">Chrome plugin to see labels of issues.</summary></entry><entry><title type="html">Practical Minimum</title><link href="http://dehasi.me/projects/practical-minimum.html" rel="alternate" type="text/html" title="Practical Minimum" /><published>2022-01-03T00:00:00-06:00</published><updated>2022-01-03T00:00:00-06:00</updated><id>http://dehasi.me/projects/practical-minimum</id><content type="html" xml:base="http://dehasi.me/projects/practical-minimum.html">&lt;div class=&quot;paragraph&quot;&gt;
+&lt;/div&gt;</content><author><name>Ravil Galeyev</name><email>dehasi@protonmail.com</email></author><category term="projects" /><summary type="html">Chrome plugin to see labels of issues.</summary></entry><entry><title type="html">Practical Minimum</title><link href="https://dehasi.me/projects/practical-minimum.html" rel="alternate" type="text/html" title="Practical Minimum" /><published>2022-01-03T00:00:00-06:00</published><updated>2022-01-03T00:00:00-06:00</updated><id>https://dehasi.me/projects/practical-minimum</id><content type="html" xml:base="https://dehasi.me/projects/practical-minimum.html">&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Semester course in Saint-Petersburg &lt;a href=&quot;https://compscicenter.ru/&quot;&gt;Computer Science Center&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;The &lt;a href=&quot;https://compscicenter.ru/courses/practical-minimum/&quot;&gt;course page&lt;/a&gt;.&lt;/p&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="projects" /><summary type="html">Semester course in Saint-Petersburg Computer Science Center.</summary></entry><entry><title type="html">ZeLiba</title><link href="http://dehasi.me/projects/zeliba.html" rel="alternate" type="text/html" title="ZeLiba" /><published>2022-01-02T00:00:00-06:00</published><updated>2022-01-02T00:00:00-06:00</updated><id>http://dehasi.me/projects/zeliba</id><content type="html" xml:base="http://dehasi.me/projects/zeliba.html">&lt;div id=&quot;preamble&quot;&gt;
+&lt;/div&gt;</content><author><name>Ravil Galeyev</name><email>dehasi@protonmail.com</email></author><category term="projects" /><summary type="html">Semester course in Saint-Petersburg Computer Science Center.</summary></entry><entry><title type="html">ZeLiba</title><link href="https://dehasi.me/projects/zeliba.html" rel="alternate" type="text/html" title="ZeLiba" /><published>2022-01-02T00:00:00-06:00</published><updated>2022-01-02T00:00:00-06:00</updated><id>https://dehasi.me/projects/zeliba</id><content type="html" xml:base="https://dehasi.me/projects/zeliba.html">&lt;div id=&quot;preamble&quot;&gt;
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/dehasi/zeliba&quot;&gt;ZeLiba&lt;/a&gt; is a DSL-ish library to make comparisons more readable.
@@ -50,7 +50,7 @@ Also, provides pattern-matching for Java 8.&lt;/p&gt;
 &lt;p&gt;see more &lt;a href=&quot;https://github.com/dehasi/zeliba#Examples&quot;&gt;Examples&lt;/a&gt;&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="projects" /><summary type="html">ZeLiba is a DSL-ish library to make comparisons more readable. Also, provides pattern-matching for Java 8.</summary></entry><entry><title type="html">Apache Ignite Machine Learning Module</title><link href="http://dehasi.me/projects/apache-ignite.html" rel="alternate" type="text/html" title="Apache Ignite Machine Learning Module" /><published>2022-01-01T00:00:00-06:00</published><updated>2022-01-01T00:00:00-06:00</updated><id>http://dehasi.me/projects/apache-ignite</id><content type="html" xml:base="http://dehasi.me/projects/apache-ignite.html">&lt;div class=&quot;paragraph&quot;&gt;
+&lt;/div&gt;</content><author><name>Ravil Galeyev</name><email>dehasi@protonmail.com</email></author><category term="projects" /><summary type="html">ZeLiba is a DSL-ish library to make comparisons more readable. Also, provides pattern-matching for Java 8.</summary></entry><entry><title type="html">Apache Ignite Machine Learning Module</title><link href="https://dehasi.me/projects/apache-ignite.html" rel="alternate" type="text/html" title="Apache Ignite Machine Learning Module" /><published>2022-01-01T00:00:00-06:00</published><updated>2022-01-01T00:00:00-06:00</updated><id>https://dehasi.me/projects/apache-ignite</id><content type="html" xml:base="https://dehasi.me/projects/apache-ignite.html">&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Machine Leaning module in &lt;a href=&quot;https://ignite.apache.org/&quot;&gt;Apache Ignite&lt;/a&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -58,7 +58,7 @@ Also, provides pattern-matching for Java 8.&lt;/p&gt;
 &lt;/div&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;My humble &lt;a href=&quot;https://github.com/apache/ignite/commits?author=dehasi&quot;&gt;commits&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="projects" /><summary type="html">Machine Leaning module in Apache Ignite.</summary></entry><entry><title type="html">Adding data to MySQL container</title><link href="http://dehasi.me/notes/dockerize-mysql.html" rel="alternate" type="text/html" title="Adding data to MySQL container" /><published>2021-10-01T00:00:00-05:00</published><updated>2021-10-01T00:00:00-05:00</updated><id>http://dehasi.me/notes/dockerize-mysql</id><content type="html" xml:base="http://dehasi.me/notes/dockerize-mysql.html">&lt;div class=&quot;sect1&quot;&gt;
+&lt;/div&gt;</content><author><name>Ravil Galeyev</name><email>dehasi@protonmail.com</email></author><category term="projects" /><summary type="html">Machine Leaning module in Apache Ignite.</summary></entry><entry><title type="html">Adding data to MySQL container</title><link href="https://dehasi.me/notes/dockerize-mysql.html" rel="alternate" type="text/html" title="Adding data to MySQL container" /><published>2021-10-01T00:00:00-05:00</published><updated>2021-10-01T00:00:00-05:00</updated><id>https://dehasi.me/notes/dockerize-mysql</id><content type="html" xml:base="https://dehasi.me/notes/dockerize-mysql.html">&lt;div class=&quot;sect1&quot;&gt;
 &lt;h2 id=&quot;mount-scripts&quot;&gt;Mount scripts&lt;/h2&gt;
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
@@ -291,12 +291,12 @@ mysql&amp;gt; select * from my_table;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">Mount scripts</summary></entry><entry><title type="html">NginX</title><link href="http://dehasi.me/notes/nginx.html" rel="alternate" type="text/html" title="NginX" /><published>2021-06-11T00:00:00-05:00</published><updated>2021-06-11T00:00:00-05:00</updated><id>http://dehasi.me/notes/nginx</id><content type="html" xml:base="http://dehasi.me/notes/nginx.html">&lt;div class=&quot;sect1&quot;&gt;
+&lt;/div&gt;</content><author><name>Ravil Galeyev</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">Mount scripts</summary></entry><entry><title type="html">NginX</title><link href="https://dehasi.me/notes/nginx.html" rel="alternate" type="text/html" title="NginX" /><published>2021-06-11T00:00:00-05:00</published><updated>2021-06-11T00:00:00-05:00</updated><id>https://dehasi.me/notes/nginx</id><content type="html" xml:base="https://dehasi.me/notes/nginx.html">&lt;div class=&quot;sect1&quot;&gt;
 &lt;h2 id=&quot;run-static-site&quot;&gt;Run static site&lt;/h2&gt;
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;listingblock&quot;&gt;
 &lt;div class=&quot;content&quot;&gt;
-&lt;pre&gt;docker run -it --rm --detach --publich 8080:80 \
+&lt;pre&gt;docker run -it --rm --detach --publish 8080:80 \
   --volume ~/site:/usr/share/nginx/html
   nginx&lt;/pre&gt;
 &lt;/div&gt;
@@ -328,9 +328,9 @@ mysql&amp;gt; select * from my_table;
 &lt;p&gt;The config is in &lt;code&gt;/etc/nginx/nginx.conf&lt;/code&gt; and &lt;code&gt;/etc/nginx/conf.d/default.conf&lt;/code&gt;.&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">Run static site</summary></entry><entry><title type="html">The first hidden post</title><link href="http://dehasi.me/hidden/hidded-post.html" rel="alternate" type="text/html" title="The first hidden post" /><published>2021-05-02T00:00:00-05:00</published><updated>2021-05-02T00:00:00-05:00</updated><id>http://dehasi.me/hidden/hidded-post</id><content type="html" xml:base="http://dehasi.me/hidden/hidded-post.html">&lt;div class=&quot;paragraph&quot;&gt;
+&lt;/div&gt;</content><author><name>Ravil Galeyev</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">Run static site</summary></entry><entry><title type="html">The first hidden post</title><link href="https://dehasi.me/hidden/hidded-post.html" rel="alternate" type="text/html" title="The first hidden post" /><published>2021-05-02T00:00:00-05:00</published><updated>2021-05-02T00:00:00-05:00</updated><id>https://dehasi.me/hidden/hidded-post</id><content type="html" xml:base="https://dehasi.me/hidden/hidded-post.html">&lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;This is just an example of a hidden post.&lt;/p&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="hidden" /><summary type="html">This is just an example of a hidden post.</summary></entry><entry><title type="html">Dockerize wiremock</title><link href="http://dehasi.me/notes/dockerize-wiremock.html" rel="alternate" type="text/html" title="Dockerize wiremock" /><published>2021-04-17T00:00:00-05:00</published><updated>2021-04-17T00:00:00-05:00</updated><id>http://dehasi.me/notes/dockerize-wiremock</id><content type="html" xml:base="http://dehasi.me/notes/dockerize-wiremock.html">&lt;div id=&quot;preamble&quot;&gt;
+&lt;/div&gt;</content><author><name>Ravil Galeyev</name><email>dehasi@protonmail.com</email></author><category term="hidden" /><summary type="html">This is just an example of a hidden post.</summary></entry><entry><title type="html">Dockerize wiremock</title><link href="https://dehasi.me/notes/dockerize-wiremock.html" rel="alternate" type="text/html" title="Dockerize wiremock" /><published>2021-04-17T00:00:00-05:00</published><updated>2021-04-17T00:00:00-05:00</updated><id>https://dehasi.me/notes/dockerize-wiremock</id><content type="html" xml:base="https://dehasi.me/notes/dockerize-wiremock.html">&lt;div id=&quot;preamble&quot;&gt;
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
 &lt;p&gt;Please, visit &lt;a href=&quot;http://wiremock.org/docs/getting-started/&quot;&gt;wiremock&lt;/a&gt; website for the official documentation.&lt;/p&gt;
@@ -455,10 +455,10 @@ enable-browser-proxying:      &lt;span class=&quot;nb&quot;&gt;false
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">Please, visit wiremock website for the official documentation.</summary></entry><entry><title type="html">Add AsciiDoc to Jekyll</title><link href="http://dehasi.me/notes/add-asciidoc-to-jekyll.html" rel="alternate" type="text/html" title="Add AsciiDoc to Jekyll" /><published>2021-04-12T00:00:00-05:00</published><updated>2021-04-12T00:00:00-05:00</updated><id>http://dehasi.me/notes/add-asciidoc-to-jekyll</id><content type="html" xml:base="http://dehasi.me/notes/add-asciidoc-to-jekyll.html">&lt;div id=&quot;preamble&quot;&gt;
+&lt;/div&gt;</content><author><name>Ravil Galeyev</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">Please, visit wiremock website for the official documentation.</summary></entry><entry><title type="html">Add AsciiDoc to Jekyll</title><link href="https://dehasi.me/notes/add-asciidoc-to-jekyll.html" rel="alternate" type="text/html" title="Add AsciiDoc to Jekyll" /><published>2021-04-12T00:00:00-05:00</published><updated>2021-04-12T00:00:00-05:00</updated><id>https://dehasi.me/notes/add-asciidoc-to-jekyll</id><content type="html" xml:base="https://dehasi.me/notes/add-asciidoc-to-jekyll.html">&lt;div id=&quot;preamble&quot;&gt;
 &lt;div class=&quot;sectionbody&quot;&gt;
 &lt;div class=&quot;paragraph&quot;&gt;
-&lt;p&gt;It&amp;#8217;s mostly copy-paste of &lt;a href=&quot;https://www.crystal-growth.net/jekyll/2020/10/16/jekyll-setup.html&quot;&gt;this&lt;/a&gt; source&lt;/p&gt;
+&lt;p&gt;It&amp;#8217;s mostly copy-paste of &lt;a href=&quot;https://www.crystal-growth.net/etc/basic-jekyll-site&quot;&gt;this&lt;/a&gt; source&lt;/p&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
@@ -618,4 +618,4 @@ c^2 = a^2 + b^2 + 5
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;/div&gt;</content><author><name>dehasi</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">It&amp;#8217;s mostly copy-paste of this source</summary></entry></feed>
+&lt;/div&gt;</content><author><name>Ravil Galeyev</name><email>dehasi@protonmail.com</email></author><category term="notes" /><summary type="html">It&amp;#8217;s mostly copy-paste of this source</summary></entry></feed>
